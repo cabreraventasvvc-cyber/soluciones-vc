@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanina Cabrera | Soluciones Digitales - Tiendas Online, Control de Stock y Apps</title>
+  <meta name="description" content="Diseño y desarrollo de tiendas online, sistemas de control de stock, apps de turnos para peluquerías y soluciones digitales a medida. Consultá tu demo por WhatsApp al 11 3435-2310.">
+  
+  <!-- Favicon icon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              200: '#c7d2fe',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              800: '#3730a3',
+              900: '#312e81',
+            },
+            accent: {
+              pink: '#ec4899',
+              darkpink: '#be185d',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Estilos Personalizados -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-slate-50/50 text-slate-800 antialiased selection:bg-indigo-500 selection:text-white">
+
+  <!-- Barra de Notificación Superior -->
+  <div class="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium flex flex-wrap items-center justify-center gap-2 sm:gap-4">
+    <span>🚀 <strong>Tecnología simple para hacer crecer tu negocio ♡</strong></span>
+    <span class="hidden md:inline">•</span>
+    <a href="mailto:sistemapospro1@gmail.com" class="hover:text-pink-200 transition flex items-center gap-1.5 underline">
+      <i class="fa-solid fa-envelope"></i> sistemapospro1@gmail.com
+    </a>
+    <span class="hidden sm:inline">•</span>
+    <a href="https://wa.me/5491134352310?text=Hola%20Vanina!%20Vi%20tu%20página%20y%20quiero%20consultar%20por%20tus%20servicios" target="_blank" class="underline hover:text-pink-200 transition font-bold flex items-center gap-1">
+      <i class="fa-brands fa-whatsapp text-emerald-400"></i> WhatsApp: 11 3435-2310
+    </a>
+  </div>
+
+  <!-- Barra de Navegación -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm transition">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logotipo de Marca Vanina Cabrera VC -->
+      <a href="#inicio" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 flex items-center justify-center text-white font-extrabold text-xl shadow-lg shadow-indigo-500/25 group-hover:scale-105 transition">
+          VC
+        </div>
+        <div class="flex flex-col">
+          <span class="font-extrabold text-lg sm:text-xl text-slate-900 tracking-tight leading-tight group-hover:text-indigo-600 transition">
+            Vanina Cabrera
+          </span>
+          <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 flex items-center gap-1">
+            Soluciones Digitales <span class="text-pink-500">♡</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- Enlaces de Escritorio -->
+      <nav class="hidden md:flex items-center gap-5 text-sm font-semibold text-slate-600">
+        <a href="#inicio" class="hover:text-indigo-600 transition">Inicio</a>
+        <a href="#productos" class="hover:text-indigo-600 transition">Soluciones</a>
+        <a href="#demos" class="hover:text-pink-600 transition flex items-center gap-1.5 font-bold text-pink-600 bg-pink-50/90 px-3 py-1.5 rounded-full border border-pink-200 shadow-sm hover:scale-105">
+          <span class="w-2 h-2 rounded-full bg-pink-500 animate-pulse"></span> Demos en Vivo
+        </a>
+        <a href="#volantes" class="hover:text-indigo-600 transition">Volantes</a>
+        <a href="#cotizador" class="hover:text-indigo-600 transition">Armar Paquete</a>
+        <a href="#beneficios" class="hover:text-indigo-600 transition">Beneficios</a>
+        <a href="#faq" class="hover:text-indigo-600 transition">Preguntas</a>
+        <a href="#contacto" class="hover:text-indigo-600 transition flex items-center gap-1.5 text-indigo-700 font-bold bg-indigo-50 px-3 py-1.5 rounded-full border border-indigo-100">
+          <i class="fa-solid fa-envelope text-xs"></i> Contacto & Formulario
+        </a>
+      </nav>
+
+      <!-- Botón Contacto WhatsApp -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="https://wa.me/5491134352310?text=Hola%20Vanina!%20Quiero%20pedirte%20información%20sobre%20tus%20soluciones%20digitales" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="btn-whatsapp py-2.5 px-5 rounded-full font-bold text-xs flex items-center gap-2">
+          <i class="fa-brands fa-whatsapp text-base"></i>
+          <span>11 3435-2310</span>
+        </a>
+      </div>
+
+      <!-- Botón Móvil -->
+      <button id="mobile-menu-btn" class="md:hidden p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 transition focus:outline-none" aria-label="Menú">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Menú Desplegable Móvil -->
+    <div id="mobile-nav" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-5 space-y-3.5 shadow-xl">
+      <a href="#inicio" class="block font-semibold text-slate-700 hover:text-indigo-600">Inicio</a>
+      <a href="#productos" class="block font-semibold text-slate-700 hover:text-indigo-600">Soluciones Digitales</a>
+      <a href="#demos" class="block font-bold text-pink-600 hover:text-pink-700 flex items-center gap-2 bg-pink-50 p-3 rounded-xl border border-pink-200">
+        <span class="w-2.5 h-2.5 rounded-full bg-pink-500 animate-pulse"></span>
+        <span>Demos en Vivo (5 Ejemplos Reales)</span>
+      </a>
+      <a href="#volantes" class="block font-semibold text-slate-700 hover:text-indigo-600">Volantes</a>
+      <a href="#cotizador" class="block font-semibold text-slate-700 hover:text-indigo-600">Armar Paquete</a>
+      <a href="#beneficios" class="block font-semibold text-slate-700 hover:text-indigo-600">Beneficios</a>
+      <a href="#faq" class="block font-semibold text-slate-700 hover:text-indigo-600">Preguntas Frecuentes</a>
+      <a href="#contacto" class="block font-bold text-indigo-700 hover:text-indigo-900 flex items-center gap-2 bg-indigo-50 p-2.5 rounded-xl">
+        <i class="fa-solid fa-envelope"></i> Formulario de Contacto & Mail
+      </a>
+      <div class="pt-3 border-t border-slate-100">
+        <a href="https://wa.me/5491134352310?text=Hola%20Vanina!%20Quiero%20pedirte%20información%20sobre%20tus%20soluciones%20digitales" 
+           target="_blank" 
+           class="btn-whatsapp py-3 px-5 rounded-xl font-bold text-sm flex items-center justify-center gap-2 w-full text-center">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          Escribime por WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 bg-gradient-to-b from-white via-indigo-50/30 to-slate-50">
+    <!-- Círculos decorativos de fondo -->
+    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-tr from-indigo-200/40 via-purple-200/30 to-pink-200/20 blur-3xl rounded-full pointer-events-none -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Texto del Hero -->
+        <div class="lg:col-span-7 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-100/80 text-indigo-800 text-xs font-bold mb-6 border border-indigo-200 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-pink-500 animate-pulse"></span>
+            DISEÑO • DESARROLLO • RESULTADOS
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] mb-6">
+            Llevá tu negocio al siguiente nivel con <span class="text-gradient">Soluciones Digitales</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            Desarrollo y diseño pensado para <strong>facilitar tu trabajo</strong> y <strong>mejorar la experiencia de tus clientes</strong>. Tiendas online, control de stock, apps de turnos y sistemas comerciales listos para usar en tu celular o computadora.
+          </p>
+
+          <!-- Badges de características destacadas -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-9 max-w-xl mx-auto lg:mx-0 text-left">
+            <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-slate-200/80 shadow-sm">
+              <i class="fa-solid fa-mobile-screen text-indigo-600 text-base"></i>
+              <span class="text-xs font-bold text-slate-700">100% Celular</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-slate-200/80 shadow-sm">
+              <i class="fa-brands fa-whatsapp text-emerald-500 text-base"></i>
+              <span class="text-xs font-bold text-slate-700">Pedidos WhatsApp</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-slate-200/80 shadow-sm">
+              <i class="fa-solid fa-shield-halved text-purple-600 text-base"></i>
+              <span class="text-xs font-bold text-slate-700">Fácil & Seguro</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-slate-200/80 shadow-sm">
+              <i class="fa-solid fa-bolt text-pink-500 text-base"></i>
+              <span class="text-xs font-bold text-slate-700">Demos en Vivo</span>
+            </div>
+          </div>
+
+          <!-- Botones de Acción -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5">
+            <a href="#demos" class="btn-primary py-3.5 px-7 rounded-full font-bold text-sm w-full sm:w-auto text-center flex items-center justify-center gap-2.5 shadow-xl hover:scale-105">
+              <span class="w-2.5 h-2.5 rounded-full bg-pink-300 animate-pulse"></span>
+              <i class="fa-solid fa-play text-xs"></i> Ver Demos en Vivo (5 Ejemplos)
+            </a>
+            <a href="#productos" class="btn-secondary py-3.5 px-6 rounded-full font-bold text-sm w-full sm:w-auto text-center flex items-center justify-center gap-2">
+              <i class="fa-solid fa-layer-group"></i> Ver Soluciones
+            </a>
+            <a href="https://wa.me/5491134352310?text=Hola%20Vanina!%20Quiero%20consultar%20por%20una%20demo%20sin%20compromiso" 
+               target="_blank" 
+               class="btn-whatsapp py-3.5 px-6 rounded-full font-bold text-sm w-full sm:w-auto text-center flex items-center justify-center gap-2 shadow-lg">
+              <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp
+            </a>
+          </div>
+
+          <p class="text-xs text-slate-600 mt-4 flex items-center justify-center lg:justify-start gap-1 font-medium">
+            <i class="fa-solid fa-circle-check text-emerald-500"></i> Demos reales en vivo disponibles para que pruebes antes de contratar.
+          </p>
+        </div>
+
+        <!-- Mockup / Tarjeta Destacada del Hero -->
+        <div class="lg:col-span-5">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            
+            <!-- Glow detrás de la card -->
+            <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-3xl blur opacity-25"></div>
+
+            <div class="relative bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-2xl">
+              
+              <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-5">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-black text-slate-900 text-sm">Productos Estrella</h4>
+                    <p class="text-xs text-slate-500">Soluciones con demos activas</p>
+                  </div>
+                </div>
+                <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 text-xs font-bold rounded-lg border border-emerald-200 flex items-center gap-1">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> 5 Demos Activas
+                </span>
+              </div>
+
+              <!-- Lista de 3 soluciones principales -->
+              <div class="space-y-3.5">
+                
+                <!-- Item 1: Tienda Online -->
+                <div onclick="openProductModal('tienda-online')" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-indigo-50/60 border border-slate-200 hover:border-indigo-200 transition cursor-pointer flex items-center justify-between group">
+                  <div class="flex items-center gap-3.5">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-purple-600 text-white flex items-center justify-center text-sm shadow">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <div>
+                      <div class="flex items-center gap-2">
+                        <h5 class="font-bold text-slate-900 text-sm group-hover:text-indigo-700 transition">Tienda Online Completa</h5>
+                        <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-pink-100 text-pink-700 border border-pink-200">Demo Loreley</span>
+                      </div>
+                      <p class="text-xs text-slate-500">Catálogo, variantes, carrito y pedidos a WhatsApp</p>
+                    </div>
+                  </div>
+                  <i class="fa-solid fa-chevron-right text-slate-400 group-hover:text-indigo-600 group-hover:translate-x-1 transition text-xs"></i>
+                </div>
+
+                <!-- Item 2: Control de Stock -->
+                <div onclick="openProductModal('control-stock')" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-indigo-50/60 border border-slate-200 hover:border-indigo-200 transition cursor-pointer flex items-center justify-between group">
+                  <div class="flex items-center gap-3.5">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-700 text-white flex items-center justify-center text-sm shadow">
+                      <i class="fa-solid fa-boxes-stacked"></i>
+                    </div>
+                    <div>
+                      <h5 class="font-bold text-slate-900 text-sm group-hover:text-indigo-700 transition">Control de Stock & Inventario</h5>
+                      <p class="text-xs text-slate-500">Alertas de stock bajo, compras y reportes</p>
+                    </div>
+                  </div>
+                  <i class="fa-solid fa-chevron-right text-slate-400 group-hover:text-indigo-600 group-hover:translate-x-1 transition text-xs"></i>
+                </div>
+
+                <!-- Item 3: App para Turnos -->
+                <div onclick="openProductModal('app-turnos')" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-indigo-50/60 border border-slate-200 hover:border-indigo-200 transition cursor-pointer flex items-center justify-between group">
+                  <div class="flex items-center gap-3.5">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-pink-500 to-rose-600 text-white flex items-center justify-center text-sm shadow">
+                      <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <div>
+                      <div class="flex items-center gap-2">
+                        <h5 class="font-bold text-slate-900 text-sm group-hover:text-indigo-700 transition">App de Turnos & Reservas</h5>
+                        <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-pink-100 text-pink-700 border border-pink-200">Demo E&B</span>
+                      </div>
+                      <p class="text-xs text-slate-500">Peluquerías y salones: reservas 24/7 y recordatorios</p>
+                    </div>
+                  </div>
+                  <i class="fa-solid fa-chevron-right text-slate-400 group-hover:text-indigo-600 group-hover:translate-x-1 transition text-xs"></i>
+                </div>
+
+              </div>
+
+              <!-- Destacado en tarjeta -->
+              <div class="mt-5 p-3.5 rounded-2xl bg-gradient-to-r from-indigo-900 to-purple-900 text-white text-xs flex items-center justify-between shadow-lg">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center text-pink-300">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                  </div>
+                  <div>
+                    <p class="font-bold">Usalas desde tu celular</p>
+                    <p class="text-slate-300 text-[11px]">Probá las 5 demos interactivas en vivo</p>
+                  </div>
+                </div>
+                <a href="#demos" class="px-3 py-1.5 bg-white/20 hover:bg-white/30 rounded-lg text-white font-bold transition flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Probar
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Barra de Estadísticas / Confianza -->
+  <section class="border-y border-slate-200 bg-white py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="p-4">
+          <p class="text-3xl lg:text-4xl font-black text-indigo-600 mb-1">100%</p>
+          <p class="text-xs sm:text-sm font-semibold text-slate-600">Adaptadas a Celular</p>
+          <p class="text-[11px] text-slate-400">Tus clientes compran desde cualquier lugar</p>
+        </div>
+        <div class="p-4">
+          <p class="text-3xl lg:text-4xl font-black text-pink-500 mb-1">24 / 7</p>
+          <p class="text-xs sm:text-sm font-semibold text-slate-600">Ventas y Turnos Activos</p>
+          <p class="text-[11px] text-slate-400">Tu negocio abierto todo el día</p>
+        </div>
+        <div class="p-4">
+          <p class="text-3xl lg:text-4xl font-black text-indigo-600 mb-1">0%</p>
+          <p class="text-xs sm:text-sm font-semibold text-slate-600">Comisiones por Venta</p>
+          <p class="text-[11px] text-slate-400">Tus ganancias son 100% para vos</p>
+        </div>
+        <div class="p-4">
+          <p class="text-3xl lg:text-4xl font-black text-emerald-600 mb-1">1 a 1</p>
+          <p class="text-xs sm:text-sm font-semibold text-slate-600">Atención Personalizada</p>
+          <p class="text-[11px] text-slate-400">Directo con Vanina Cabrera</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Catálogo de Soluciones Digitales -->
+  <section id="productos" class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-100">
+          Catálogo Completo
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-3 mb-4 tracking-tight">
+          Soluciones Digitales Pensadas para tu Negocio
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Cada desarrollo está creado para resolver una necesidad concreta: vender más, organizar tu stock, automatizar tus turnos o profesionalizar tu imagen.
+        </p>
+
+        <!-- Filtro de Categorías -->
+        <div class="flex items-center justify-center gap-2 mt-8 overflow-x-auto pb-2 scrollbar-none">
+          <button class="filter-tab active" data-filter="all">Todos</button>
+          <button class="filter-tab" data-filter="ecommerce">E-Commerce & Apps</button>
+          <button class="filter-tab" data-filter="gestion">Gestión & Stock</button>
+          <button class="filter-tab" data-filter="turnos">Turnos & Salones</button>
+          <button class="filter-tab" data-filter="diseno">Diseño & Automatización</button>
+        </div>
+      </div>
+
+      <!-- Contenedor Dinámico de Productos (renderizado vía app.js) -->
+      <div id="products-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rellenado con JavaScript -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sección de Demos en Vivo & Proyectos Reales -->
+  <section id="demos" class="py-20 lg:py-28 bg-gradient-to-b from-slate-50 via-indigo-50/20 to-white border-t border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-pink-600 bg-pink-50 px-3.5 py-1.5 rounded-full border border-pink-200 shadow-xs mb-3">
+          <span class="w-2 h-2 rounded-full bg-pink-500 animate-pulse"></span>
+          <span>Proyectos Reales en Internet</span>
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-black text-slate-900 mt-2 mb-4 tracking-tight">
+          Demos en Vivo Diseñadas por Vanina Cabrera
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Navegá y probá cada desarrollo directamente en tu celular o computadora. Todos estos ejemplos son sitios web y aplicaciones <strong>reales, funcionales y listos para interactuar</strong>.
+        </p>
+
+        <!-- Banner informativo para clientes y Vanina -->
+        <div class="mt-6 inline-flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs bg-white px-5 py-2.5 rounded-2xl border border-indigo-100 shadow-sm text-slate-600">
+          <span class="flex items-center gap-1.5 font-bold text-indigo-700">
+            <i class="fa-solid fa-circle-check text-emerald-500 text-sm"></i> ¿Un cliente te pide un demo?
+          </span>
+          <span class="text-slate-500">Hacé clic en <strong>"Copiar Link"</strong> en cualquier tarjeta para pegárselo por WhatsApp al instante.</span>
+        </div>
+
+        <!-- Filtro de Categorías de Demos -->
+        <div class="flex items-center justify-center gap-2 mt-8 overflow-x-auto pb-2 scrollbar-none">
+          <button class="filter-tab demo-filter-tab active" data-filter="all">Todas las Demos (5)</button>
+          <button class="filter-tab demo-filter-tab" data-filter="ecommerce">E-Commerce & PWA</button>
+          <button class="filter-tab demo-filter-tab" data-filter="turnos">Turnos & Salones</button>
+          <button class="filter-tab demo-filter-tab" data-filter="gestion">Mayorista & Cervecería</button>
+          <button class="filter-tab demo-filter-tab" data-filter="diseno">Turismo & CRM</button>
+        </div>
+      </div>
+
+      <!-- Contenedor Dinámico de Demos (renderizado vía app.js) -->
+      <div id="demos-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+        <!-- Rellenado con JavaScript (DEMOS_DATA) -->
+      </div>
+
+      <!-- Banner de Personalización al Pie de las Demos -->
+      <div class="mt-14 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 rounded-3xl p-8 sm:p-10 text-white shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-2 text-center md:text-left">
+          <span class="text-xs uppercase font-extrabold tracking-widest text-pink-300 bg-white/10 px-3 py-1 rounded-full border border-white/15">
+            100% Personalizado a tu Marca
+          </span>
+          <h3 class="text-2xl sm:text-3xl font-black">¿Querés un diseño adaptado exactamente a tu negocio?</h3>
+          <p class="text-sm text-indigo-200 max-w-xl">
+            Cualquiera de estas soluciones se configura con tu logo, tus colores, tu catálogo de productos o servicios, tus precios y tu número directo de WhatsApp.
+          </p>
+        </div>
+        <a href="https://wa.me/5491134352310?text=Hola%20Vanina!%20Estuve%20viendo%20tus%20demos%20en%20vivo%20y%20quiero%20hacerte%20una%20consulta%20para%20mi%20negocio" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn-whatsapp py-4 px-8 rounded-full font-extrabold text-sm whitespace-nowrap shadow-xl flex items-center gap-2.5 hover:scale-105 transition">
+          <i class="fa-brands fa-whatsapp text-xl"></i>
+          <span>Pedir Presupuesto por WhatsApp</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sección Galería de Volantes Oficiales -->
+  <section id="volantes" class="py-20 bg-slate-100/70 border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-pink-600 bg-pink-50 px-3 py-1 rounded-full border border-pink-100">
+          Material Oficial
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-3 mb-3">
+          Nuestros Volantes y Especificaciones
+        </h2>
+        <p class="text-slate-600 text-sm">
+          Hacé clic sobre cualquier volante para ampliarlo y ver todas las especificaciones detalladas de cada solución.
+        </p>
+      </div>
+
+      <!-- Grid de los 4 volantes de Vanina Cabrera -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Volante 1: Tienda Online -->
+        <div class="flyer-thumb-card bg-white p-3 group" onclick="openFlyerLightbox('assets/img/volante-tienda-online.jpg', 'Tienda Online - E-Commerce Completo')">
+          <div class="relative overflow-hidden rounded-xl">
+            <img src="assets/img/volante-tienda-online.jpg" alt="Volante Tienda Online" class="w-full h-80 object-cover object-top transition duration-300 group-hover:scale-105">
+            <div class="overlay-zoom">
+              <span class="bg-indigo-600 text-white text-xs px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+                <i class="fa-solid fa-magnifying-glass"></i> Ampliar Volante
+              </span>
+            </div>
+          </div>
+          <div class="pt-3 text-center">
+            <h4 class="font-bold text-slate-900 text-sm">Tienda Online</h4>
+            <p class="text-xs text-indigo-600 font-medium">E-Commerce & Pedidos WhatsApp</p>
+          </div>
+        </div>
+
+        <!-- Volante 2: Control de Stock -->
+        <div class="flyer-thumb-card bg-white p-3 group" onclick="openFlyerLightbox('assets/img/volante-control-stock.jpg', 'Sistema de Control de Stock')">
+          <div class="relative overflow-hidden rounded-xl">
+            <img src="assets/img/volante-control-stock.jpg" alt="Volante Control de Stock" class="w-full h-80 object-cover object-top transition duration-300 group-hover:scale-105">
+            <div class="overlay-zoom">
+              <span class="bg-indigo-600 text-white text-xs px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+                <i class="fa-solid fa-magnifying-glass"></i> Ampliar Volante
+              </span>
+            </div>
+          </div>
+          <div class="pt-3 text-center">
+            <h4 class="font-bold text-slate-900 text-sm">Control de Stock</h4>
+            <p class="text-xs text-indigo-600 font-medium">Inventario, Alertas y Compras</p>
+          </div>
+        </div>
+
+        <!-- Volante 3: App para Turnos -->
+        <div class="flyer-thumb-card bg-white p-3 group" onclick="openFlyerLightbox('assets/img/volante-turnos-peluqueria.jpg', 'App para Turnos y Reservas de Peluquería')">
+          <div class="relative overflow-hidden rounded-xl">
+            <img src="assets/img/volante-turnos-peluqueria.jpg" alt="Volante App Turnos Peluquería" class="w-full h-80 object-cover object-top transition duration-300 group-hover:scale-105">
+            <div class="overlay-zoom">
+              <span class="bg-indigo-600 text-white text-xs px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+                <i class="fa-solid fa-magnifying-glass"></i> Ampliar Volante
+              </span>
+            </div>
+          </div>
+          <div class="pt-3 text-center">
+            <h4 class="font-bold text-slate-900 text-sm">App Turnos & Reservas</h4>
+            <p class="text-xs text-indigo-600 font-medium">Peluquerías, Salones y Estética</p>
+          </div>
+        </div>
+
+        <!-- Volante 4: Soluciones Digitales General -->
+        <div class="flyer-thumb-card bg-white p-3 group" onclick="openFlyerLightbox('assets/img/volante-soluciones-digitales.jpg', 'Soluciones Digitales para tu Negocio')">
+          <div class="relative overflow-hidden rounded-xl">
+            <img src="assets/img/volante-soluciones-digitales.jpg" alt="Volante Soluciones Digitales" class="w-full h-80 object-cover object-top transition duration-300 group-hover:scale-105">
+            <div class="overlay-zoom">
+              <span class="bg-indigo-600 text-white text-xs px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+                <i class="fa-solid fa-magnifying-glass"></i> Ampliar Volante
+              </span>
+            </div>
+          </div>
+          <div class="pt-3 text-center">
+            <h4 class="font-bold text-slate-900 text-sm">Soluciones Integrales</h4>
+            <p class="text-xs text-indigo-600 font-medium">POS, Web, Folletos y Más</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Cotizador Interactivo: Armá tu Paquete Digital -->
+  <section id="cotizador" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Información izquierda del cotizador -->
+        <div class="lg:col-span-5">
+          <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-100">
+            Cotizador Rápido
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-3 mb-4 tracking-tight">
+            Armá el Combo Ideal para tu Negocio
+          </h2>
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
+            Seleccioná las soluciones digitales que te gustaría implementar. Podés combinar tienda online con stock, o una app para turnos con diseño para tus redes. Al finalizar, hacé clic para enviarme tu selección por WhatsApp y te paso una propuesta especial.
+          </p>
+
+          <div class="space-y-4 mb-6">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs mt-0.5">
+                1
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                <strong>Marcá las herramientas</strong> que necesitás en la lista.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-xs mt-0.5">
+                2
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                <strong>Escribí el nombre de tu negocio</strong> y rubro.
+              </p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-pink-100 text-pink-700 flex items-center justify-center font-bold text-xs mt-0.5">
+                3
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Hacé clic en <strong>Enviar Propuesta</strong> y se abre tu WhatsApp con el mensaje ya escrito para que hablemos directo.
+              </p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-indigo-50/80 border border-indigo-100">
+            <p class="text-xs text-indigo-900 font-semibold flex items-center gap-2">
+              <i class="fa-solid fa-tag text-pink-500"></i> Descuentos por paquete
+            </p>
+            <p class="text-xs text-indigo-700 mt-1">
+              Al contratar más de una solución digital en conjunto, aplicamos promociones exclusivas para tu emprendimiento.
+            </p>
+          </div>
+        </div>
+
+        <!-- Caja interactiva del cotizador -->
+        <div class="lg:col-span-7">
+          <div class="bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-xl">
+            
+            <div class="flex items-center justify-between border-b border-slate-200 pb-4 mb-5">
+              <h3 class="font-black text-slate-900 text-base flex items-center gap-2">
+                <i class="fa-solid fa-sliders text-indigo-600"></i> Elegí tus Soluciones:
+              </h3>
+              <span class="text-xs font-bold text-indigo-700 bg-indigo-100 px-3 py-1 rounded-full">
+                <span id="selected-services-count">0</span> seleccionadas
+              </span>
+            </div>
+
+            <!-- Lista de Servicios con Checkbox (Renderizado dinámicamente) -->
+            <div id="calculator-items-container" class="space-y-2.5 mb-6 max-h-80 overflow-y-auto pr-1">
+              <!-- Rellenado por app.js -->
+            </div>
+
+            <!-- Campos del Negocio -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1.5">Nombre de tu Negocio / Emprendimiento:</label>
+                <input type="text" id="quote-business-name" placeholder="Ej: Tienda Loreley / Barbería Express" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1.5">Rubro de tu actividad:</label>
+                <select id="quote-business-type" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white">
+                  <option value="Indumentaria y Calzado">Indumentaria / Showroom / Calzado</option>
+                  <option value="Peluquería y Estética">Peluquería / Barbería / Salón de Belleza</option>
+                  <option value="Comercio de Barrio o Almacén">Comercio de Barrio / Almacén / Verdulería</option>
+                  <option value="Gastronomía y Pastelería">Gastronomía / Cafetería / Pastelería</option>
+                  <option value="Servicios Profesionales">Servicios Profesionales / Consultor</option>
+                  <option value="Otro Emprendimiento">Otro Emprendimiento</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Resumen previo -->
+            <div class="p-3.5 rounded-xl bg-white border border-slate-200 mb-6">
+              <p class="text-xs font-bold text-slate-500 mb-1">Resumen de tu selección:</p>
+              <div id="quote-summary-preview">
+                <p class="text-slate-400 text-xs italic text-center py-3">
+                  Marcá una o más soluciones arriba para armar tu propuesta a medida.
+                </p>
+              </div>
+            </div>
+
+            <!-- Botón Enviar Cotización por WhatsApp -->
+            <button id="send-quote-btn" class="btn-whatsapp w-full py-3.5 px-6 rounded-xl font-bold text-sm flex items-center justify-center gap-2.5 opacity-50 pointer-events-none transition">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              Enviar Propuesta a Vanina por WhatsApp
+            </button>
+
+            <p class="text-[11px] text-slate-600 text-center mt-3">
+              Sin spam ni compromisos. Te respondo a la brevedad con la información exacta.
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sección Beneficios y Diferenciales -->
+  <section id="beneficios" class="py-20 lg:py-28 bg-gradient-to-b from-slate-50 to-indigo-50/40 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-100">
+          ¿Por qué elegirnos?
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-3 mb-4">
+          Beneficios Reales para tu Día a Día
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base">
+          Sabemos el esfuerzo que implica llevar adelante un negocio. Nuestras herramientas están pensadas para que vos te ocupes de vender y atender clientes, no de renegar con tecnología complicada.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Beneficio 1 -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-200/80 shadow-md flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-pink-100 text-pink-600 flex items-center justify-center text-2xl mb-6">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2.5">Ahorrá Horas de Tiempo</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Basta de responder 50 veces al día los mismos precios, talles o si hay stock. Tu catálogo o app responde por vos las 24 horas del día.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-bold text-pink-600 flex items-center gap-1.5">
+            <i class="fa-solid fa-check"></i> Menos llamadas y mensajes agotadores
+          </div>
+        </div>
+
+        <!-- Beneficio 2 -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-200/80 shadow-md flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-2xl mb-6">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2.5">Cero Errores y Faltantes</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Con el control de stock y panel de pedidos sabés exactamente qué vendiste, qué mercadería te queda y qué necesitás reponer sin contar a ciegas.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-bold text-indigo-600 flex items-center gap-1.5">
+            <i class="fa-solid fa-check"></i> Compras inteligentes y planificadas
+          </div>
+        </div>
+
+        <!-- Beneficio 3 -->
+        <div class="bg-white p-7 rounded-3xl border border-slate-200/80 shadow-md flex flex-col justify-between">
+          <div>
+            <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl mb-6">
+              <i class="fa-solid fa-comments"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2.5">Acompañamiento Directo</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              No hablás con contestadores ni empresas gigantes impersonales. Hablás directamente con Vanina Cabrera para resolver cualquier duda al instante.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-100 text-xs font-bold text-emerald-600 flex items-center gap-1.5">
+            <i class="fa-solid fa-check"></i> Soporte cálido por WhatsApp
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Proceso de Trabajo en 3 Pasos -->
+  <section class="py-20 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mb-3">
+          ¿Cómo Empezamos?
+        </h2>
+        <p class="text-slate-600 text-sm">
+          En sólo 3 pasos simples tenés tu solución lista y funcionando:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        
+        <div class="text-center p-6 rounded-2xl bg-slate-50 border border-slate-200">
+          <div class="w-16 h-16 rounded-full bg-indigo-600 text-white font-extrabold text-2xl flex items-center justify-center mx-auto mb-5 shadow-lg shadow-indigo-500/30">
+            1
+          </div>
+          <h4 class="font-bold text-lg text-slate-900 mb-2">Charla y Demo Gratis</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Me contás qué necesita tu negocio, te muestro una demostración sin costo y elegimos la mejor opción.
+          </p>
+        </div>
+
+        <div class="text-center p-6 rounded-2xl bg-slate-50 border border-slate-200">
+          <div class="w-16 h-16 rounded-full bg-purple-600 text-white font-extrabold text-2xl flex items-center justify-center mx-auto mb-5 shadow-lg shadow-purple-500/30">
+            2
+          </div>
+          <h4 class="font-bold text-lg text-slate-900 mb-2">Personalización a Medida</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Configuramos tus colores, tu logo, cargamos tus productos o servicios y dejamos tu número de WhatsApp vinculado.
+          </p>
+        </div>
+
+        <div class="text-center p-6 rounded-2xl bg-slate-50 border border-slate-200">
+          <div class="w-16 h-16 rounded-full bg-pink-500 text-white font-extrabold text-2xl flex items-center justify-center mx-auto mb-5 shadow-lg shadow-pink-500/30">
+            3
+          </div>
+          <h4 class="font-bold text-lg text-slate-900 mb-2">¡Lanzamiento y Ventas!</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Te entrego tu link listo para compartir en tus redes y clientes, junto a una guía simple para que administres todo.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Preguntas Frecuentes (FAQ) -->
+  <section id="faq" class="py-20 bg-slate-50/70 border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full border border-indigo-100">
+          Dudas Comunes
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-3 mb-3">
+          Preguntas Frecuentes
+        </h2>
+        <p class="text-slate-600 text-sm">
+          Respuestas a las preguntas que más nos hacen los emprendedores antes de empezar.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- Pregunta 1 -->
+        <div class="faq-item bg-white p-5 rounded-2xl border border-slate-200 shadow-sm cursor-pointer">
+          <div class="faq-question flex items-center justify-between">
+            <h4 class="font-bold text-slate-900 text-sm sm:text-base">¿Necesito tener computadora o puedo manejar todo desde mi celular?</h4>
+            <i class="faq-icon fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+          </div>
+          <div class="faq-answer hidden mt-3 pt-3 border-t border-slate-100 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Todas nuestras herramientas (Tiendas Online, Control de Stock, Apps de Turnos) están <strong>100% optimizadas para celular</strong>. Podés cargar productos, ver pedidos, modificar stock o agendar turnos cómodamente desde cualquier teléfono móvil o tablet.
+          </div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="faq-item bg-white p-5 rounded-2xl border border-slate-200 shadow-sm cursor-pointer">
+          <div class="faq-question flex items-center justify-between">
+            <h4 class="font-bold text-slate-900 text-sm sm:text-base">¿Cómo me llegan los pedidos de la Tienda Online?</h4>
+            <i class="faq-icon fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+          </div>
+          <div class="faq-answer hidden mt-3 pt-3 border-t border-slate-100 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Tus clientes eligen los productos, talles y colores en el catálogo, van al carrito y hacen clic en "Finalizar Pedido". La web genera un mensaje automático y se lo envía <strong>directamente a tu número de WhatsApp</strong> con el detalle completo del pedido, nombre del cliente y total a pagar.
+          </div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="faq-item bg-white p-5 rounded-2xl border border-slate-200 shadow-sm cursor-pointer">
+          <div class="faq-question flex items-center justify-between">
+            <h4 class="font-bold text-slate-900 text-sm sm:text-base">¿La app de turnos sirve para peluquerías con varios profesionales?</h4>
+            <i class="faq-icon fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+          </div>
+          <div class="faq-answer hidden mt-3 pt-3 border-t border-slate-100 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            ¡Sí! Cuenta con <strong>gestión multi-profesional</strong>. El cliente puede elegir quién lo atiende (ej: peinado con una estilista, color con otra), ver la disponibilidad de cada uno y reservar el horario exacto sin superposiciones de turnos.
+          </div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="faq-item bg-white p-5 rounded-2xl border border-slate-200 shadow-sm cursor-pointer">
+          <div class="faq-question flex items-center justify-between">
+            <h4 class="font-bold text-slate-900 text-sm sm:text-base">¿Cobran comisión mensual por lo que vendo?</h4>
+            <i class="faq-icon fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+          </div>
+          <div class="faq-answer hidden mt-3 pt-3 border-t border-slate-100 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <strong>No cobramos comisiones por tus ventas.</strong> A diferencia de plataformas masivas que te quitan porcentajes de cada producto vendido, con nuestras soluciones digitales el 100% de tus ingresos es para vos.
+          </div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="faq-item bg-white p-5 rounded-2xl border border-slate-200 shadow-sm cursor-pointer">
+          <div class="faq-question flex items-center justify-between">
+            <h4 class="font-bold text-slate-900 text-sm sm:text-base">¿Cómo pido una demo para verla antes de contratar?</h4>
+            <i class="faq-icon fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+          </div>
+          <div class="faq-answer hidden mt-3 pt-3 border-t border-slate-100 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Simplemente escribime un mensaje por WhatsApp al <strong>11 3435-2310</strong> contándome cuál es tu negocio y te envío un enlace de prueba para que puedas explorar la tienda, el panel de stock o el sistema de turnos sin ningún compromiso.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sección de Contacto y Formulario de Consultas -->
+  <section id="contacto" class="py-20 lg:py-24 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-indigo-600 bg-indigo-50 px-3.5 py-1.5 rounded-full border border-indigo-100">
+          Atención Directa
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-3 mb-3">
+          Contacto & Formulario de Consultas
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          ¿Tenés alguna consulta o querés un presupuesto personalizado? Escribinos completando el formulario o contactanos por email a <strong class="text-indigo-600">sistemapospro1@gmail.com</strong>.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- Columna Izquierda: Tarjetas de Información de Contacto -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <div class="p-7 rounded-3xl bg-slate-50 border border-slate-200 shadow-md">
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Canales de Contacto Directo</h3>
+            <p class="text-xs sm:text-sm text-slate-500 mb-6 leading-relaxed">
+              Atención directa con Vanina Cabrera. Podés escribirnos por correo o WhatsApp en cualquier momento.
+            </p>
+
+            <!-- Card Email -->
+            <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm mb-4">
+              <div class="flex items-start gap-3.5">
+                <div class="w-11 h-11 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center text-lg flex-shrink-0">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-0.5">Correo Electrónico</p>
+                  <a href="mailto:sistemapospro1@gmail.com" class="text-sm sm:text-base font-extrabold text-indigo-600 hover:text-indigo-800 break-all transition">
+                    sistemapospro1@gmail.com
+                  </a>
+                  <div class="flex items-center gap-2 mt-2">
+                    <a href="mailto:sistemapospro1@gmail.com?subject=Consulta%20desde%20la%20Web%20Soluciones%20VC" class="text-xs font-bold text-slate-600 hover:text-indigo-600 underline flex items-center gap-1">
+                      <i class="fa-solid fa-paper-plane text-[10px]"></i> Redactar Mail
+                    </a>
+                    <span class="text-slate-300">•</span>
+                    <button onclick="copyEmailToClipboard()" class="text-xs font-bold text-slate-600 hover:text-indigo-600 underline flex items-center gap-1">
+                      <i class="fa-solid fa-copy text-[10px]"></i> <span id="copy-email-text">Copiar Email</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card WhatsApp -->
+            <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm mb-6">
+              <div class="flex items-start gap-3.5">
+                <div class="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl flex-shrink-0">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-0.5">WhatsApp Directo</p>
+                  <a href="https://wa.me/5491134352310" target="_blank" class="text-base font-extrabold text-emerald-600 hover:text-emerald-700 transition">
+                    11 3435-2310
+                  </a>
+                  <p class="text-xs text-slate-400 mt-0.5">Llamadas o mensajes de Lunes a Sábado</p>
+                  <a href="https://wa.me/5491134352310?text=Hola%20Vanina!%20Te%20escribo%20desde%20la%20página%20web" target="_blank" class="inline-block mt-2 text-xs font-bold text-emerald-700 hover:underline">
+                    Abrir chat ahora →
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Beneficios de soporte -->
+            <div class="space-y-2.5 border-t border-slate-200 pt-5">
+              <div class="flex items-center gap-2 text-xs font-medium text-slate-600">
+                <i class="fa-solid fa-circle-check text-emerald-500"></i>
+                <span>Respuesta ágil a todas tus dudas</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-slate-600">
+                <i class="fa-solid fa-circle-check text-emerald-500"></i>
+                <span>Demos en vivo por WhatsApp o videollamada</span>
+              </div>
+              <div class="flex items-center gap-2 text-xs font-medium text-slate-600">
+                <i class="fa-solid fa-circle-check text-emerald-500"></i>
+                <span>Presupuestos a medida y sin letra chica</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Columna Derecha: Formulario Interactivo -->
+        <div class="lg:col-span-7">
+          <div class="bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-xl relative">
+            
+            <div class="flex items-center gap-3 border-b border-slate-200 pb-4 mb-6">
+              <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-base shadow">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </div>
+              <div>
+                <h3 class="font-extrabold text-slate-900 text-base sm:text-lg">Formulario de Contacto</h3>
+                <p class="text-xs text-slate-500">Completá tus datos y te responderemos por correo o WhatsApp</p>
+              </div>
+            </div>
+
+            <!-- Alerta de Éxito (oculta por defecto) -->
+            <div id="contact-form-success" class="hidden mb-6 p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 animate-fade-in">
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-circle-check text-emerald-500 text-xl mt-0.5"></i>
+                <div>
+                  <h4 class="font-bold text-sm">¡Consulta generada con éxito!</h4>
+                  <p class="text-xs text-emerald-700 mt-1 leading-relaxed">
+                    Muchas gracias. Hemos preparado tu consulta para enviarla a <strong>sistemapospro1@gmail.com</strong>. Si se abrió tu programa de correos, hacé clic en "Enviar". También podés enviárnosla por WhatsApp para una respuesta más rápida.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Formulario -->
+            <form id="contact-form" class="space-y-4" onsubmit="handleContactFormSubmit(event)">
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 mb-1">Nombre y Apellido *</label>
+                  <input type="text" id="contact-name" required placeholder="Tu nombre" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 mb-1">Tu Correo Electrónico *</label>
+                  <input type="email" id="contact-email" required placeholder="ejemplo@gmail.com" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 mb-1">WhatsApp / Teléfono *</label>
+                  <input type="tel" id="contact-phone" required placeholder="Ej: 11 3435-2310" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 mb-1">Nombre o Rubro de tu Negocio</label>
+                  <input type="text" id="contact-business" placeholder="Ej: Showroom de ropa / Barbería" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white">
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Solución de Interés *</label>
+                <select id="contact-service" required class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white">
+                  <option value="Tienda Online (E-Commerce)">Tienda Online (E-Commerce con Pedidos WhatsApp)</option>
+                  <option value="Sistema de Control de Stock">Sistema de Control de Stock & Inventario</option>
+                  <option value="App para Turnos y Reservas">App para Turnos y Reservas (Peluquerías y Salones)</option>
+                  <option value="Sistema POS Pro">Sistema POS Pro (Ventas mostrador y caja)</option>
+                  <option value="App PWA para Comercios">App PWA para Comercios (Verdulerías, Showrooms)</option>
+                  <option value="Diseño Web & Landing Page">Diseño Web & Landing Page Institucional</option>
+                  <option value="Formularios y Automatizaciones">Formularios y Automatizaciones (Generación PDF)</option>
+                  <option value="Diseño Digital y Folletería">Diseño Digital, Flyers y Catálogos en PDF</option>
+                  <option value="Paquete Completo o Consulta General">Paquete Completo / Consulta General</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Mensaje o Consulta Detallada *</label>
+                <textarea id="contact-message" rows="4" required placeholder="Contanos qué necesitas para tu negocio, si querés ver una demo o tenés alguna duda específica..." class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white"></textarea>
+              </div>
+
+              <!-- Botones de Acción del Formulario -->
+              <div class="pt-2 flex flex-col sm:flex-row items-center gap-3">
+                <button type="submit" class="btn-primary w-full sm:w-auto flex-1 py-3 px-6 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg">
+                  <i class="fa-solid fa-paper-plane"></i> Enviar Consulta a Vanina
+                </button>
+                <button type="button" onclick="sendContactFormViaWhatsApp()" class="btn-whatsapp w-full sm:w-auto flex-1 py-3 px-6 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg">
+                  <i class="fa-brands fa-whatsapp text-base"></i> Enviar por WhatsApp
+                </button>
+              </div>
+
+              <p class="text-[11px] text-slate-400 text-center mt-2">
+                Tus datos son 100% confidenciales y se usarán únicamente para responder tu consulta.
+              </p>
+
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Banner de Cierre / Call To Action Final -->
+  <section class="py-20 bg-gradient-to-r from-slate-900 via-indigo-950 to-purple-950 text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="bg-gradient-to-r from-indigo-900/60 to-pink-900/60 p-8 sm:p-12 rounded-3xl border border-white/10 shadow-2xl backdrop-blur-md">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-8 text-center lg:text-left">
+            <span class="px-3.5 py-1.5 rounded-full bg-white/10 text-pink-300 font-bold text-xs uppercase tracking-wider inline-block mb-4">
+              ¿Listo para empezar?
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">
+              Escribime y te muestro una demo sin compromiso
+            </h2>
+            <p class="text-slate-300 text-sm sm:text-base max-w-xl leading-relaxed mb-6">
+              Hablemos directamente por WhatsApp. Te asesoro sobre cuál es la solución más rentable para tu rubro y te acompaño en todo el proceso.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+              <a href="https://wa.me/5491134352310?text=Hola%20Vanina!%20Quiero%20una%20demo%20sin%20compromiso%20de%20tus%20soluciones%20digitales" 
+                 target="_blank" 
+                 class="btn-whatsapp py-4 px-8 rounded-full font-bold text-sm flex items-center justify-center gap-2.5 shadow-2xl w-full sm:w-auto">
+                <i class="fa-brands fa-whatsapp text-xl"></i>
+                Hablemos al 11 3435-2310
+              </a>
+              <span class="text-xs text-slate-400 font-medium">Respuesta rápida • Asesoramiento sincero</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-4 text-center">
+            <div class="inline-block bg-white p-4 rounded-2xl shadow-xl text-slate-900">
+              <div class="w-36 h-36 mx-auto bg-slate-100 rounded-xl flex flex-col items-center justify-center border border-slate-200 mb-2">
+                <i class="fa-solid fa-qrcode text-5xl text-indigo-900 mb-1"></i>
+                <span class="text-[10px] font-bold text-slate-600">Escaneá con tu celu</span>
+              </div>
+              <p class="text-xs font-extrabold text-slate-900">WhatsApp Directo</p>
+              <p class="text-xs font-bold text-indigo-600">11 3435-2310</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+        
+        <!-- Columna Marca -->
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center text-white font-extrabold text-base">
+              VC
+            </div>
+            <div>
+              <p class="font-bold text-white text-base">Vanina Cabrera</p>
+              <p class="text-xs text-indigo-400 font-semibold tracking-wider uppercase">Soluciones Digitales</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm mb-4">
+            Diseño y desarrollo enfocado en resultados comerciales. Tecnología simple para que tu negocio venda más y funcione mejor.
+          </p>
+          <p class="text-xs text-pink-400 font-medium flex items-center gap-1.5">
+            <i class="fa-solid fa-heart"></i> Diseños pensados para hacer crecer tu negocio.
+          </p>
+        </div>
+
+        <!-- Columna Soluciones -->
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Soluciones</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#productos" class="hover:text-white transition">Tiendas Online E-Commerce</a></li>
+            <li><a href="#productos" class="hover:text-white transition">Control de Stock en Tiempo Real</a></li>
+            <li><a href="#productos" class="hover:text-white transition">App para Turnos (Peluquerías)</a></li>
+            <li><a href="#productos" class="hover:text-white transition">Sistema POS Pro (Mostrador)</a></li>
+            <li><a href="#productos" class="hover:text-white transition">Páginas Web & Landing Pages</a></li>
+            <li><a href="#productos" class="hover:text-white transition">Flyers y Folletería Digital</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna Contacto -->
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Contacto Directo</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-envelope text-indigo-400"></i>
+              <a href="mailto:sistemapospro1@gmail.com" class="hover:text-white transition break-all">sistemapospro1@gmail.com</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+              <a href="https://wa.me/5491134352310" target="_blank" class="hover:text-white transition">11 3435-2310</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-location-dot text-indigo-400"></i>
+              <span>Buenos Aires, Argentina</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-clock text-pink-400"></i>
+              <span>Lunes a Sábado</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+        <p>© 2026 Vanina Cabrera - Soluciones Digitales. Todos los derechos reservados.</p>
+        <p class="mt-2 sm:mt-0">Diseño • Desarrollo • Resultados</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Modal Detalle de Producto / Volante Lightbox -->
+  <div id="product-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 modal-overlay">
+    <div class="relative bg-white w-full max-w-4xl p-6 sm:p-8 modal-content shadow-2xl border border-slate-200">
+      
+      <!-- Botón de Cerrar Modal -->
+      <button onclick="closeProductModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition text-sm">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Contenido Inyectado Dinámicamente -->
+      <div id="modal-body-content"></div>
+
+    </div>
+  </div>
+
+  <!-- Botón Flotante de WhatsApp -->
+  <a href="https://wa.me/5491134352310?text=Hola%20Vanina!%20Vi%20tu%20página%20y%20quiero%20hacerte%20una%20consulta" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     class="floating-whatsapp group"
+     aria-label="Contactar por WhatsApp">
+    
+    <div class="floating-whatsapp-tooltip hidden sm:flex">
+      <span class="text-xs">¡Hablemos por WhatsApp! Te muestro una demo 👋</span>
+    </div>
+
+    <div class="floating-whatsapp-btn">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="ping-badge"></span>
+    </div>
+  </a>
+
+  <!-- Toast de Notificación de Enlace Copiado -->
+  <div id="toast-notification" class="bg-slate-900 text-white px-5 py-3 rounded-2xl shadow-2xl border border-slate-700 flex items-center gap-3">
+    <div class="w-7 h-7 rounded-full bg-emerald-500 text-white flex items-center justify-center text-xs flex-shrink-0">
+      <i class="fa-solid fa-check"></i>
+    </div>
+    <span id="toast-notification-text" class="text-xs font-semibold">¡Link de la demo copiado al portapapeles!</span>
+  </div>
+
+  <!-- Script Principal -->
+  <script src="js/app.js"></script>
+</body>
+</html>
