@@ -1,6 +1,6 @@
 # VC - Vanina Cabrera | Soluciones Digitales
 
-Página web comercial moderna y de alta conversión desarrollada para exhibir y vender los productos y servicios digitales de **Vanina Cabrera - Soluciones Digitales**.
+Página web comercial moderna y de alta conversión desarrollada para exhibir y vender los productos y servicios digitales de **Vanina Cabrera - Soluciones Digitales**.-
 
 ---
 
