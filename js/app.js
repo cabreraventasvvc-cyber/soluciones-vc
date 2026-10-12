@@ -176,6 +176,28 @@ const PRODUCTS_DATA = [
     ],
     highlights: ["Catálogos PDF", "Flyers para redes", "Calidad imprenta", "Identidad visual"],
     whatsappText: "¡Hola Vanina! Quisiera consultar por diseño de volantes, catálogos digitales o contenido gráfico para mi marca."
+  },
+  {
+    id: "edutrayectoria",
+    name: "EduTrayectoria | Plataforma Educativa",
+    shortDesc: "Plataforma educativa digital para escuelas, institutos, academias y docentes. Una solución personalizable que permite incorporar tecnología a los procesos de enseñanza y aprendizaje.",
+    category: "educacion",
+    badge: "Plataforma Educativa",
+    icon: "fa-graduation-cap",
+    gradient: "from-blue-700 via-indigo-700 to-slate-900",
+    flyerImage: "assets/img/volante-soluciones-digitales.jpg",
+    demoUrl: "https://edutrayectoria-opal.vercel.app/",
+    demoName: "EduTrayectoria (Plataforma Educativa)",
+    features: [
+      "Plataforma educativa digital personalizable para escuelas, institutos, academias y docentes",
+      "Seguimiento integral de trayectorias escolares, régimen académico y materias adeudadas",
+      "Planilla oficial de calificaciones R.I.T.E. con exportación directa a PDF y Excel (CSV)",
+      "Simulador de roles: experiencia diferenciada para Estudiante, Docente y Preceptoría / Directivo",
+      "Gestión de períodos de intensificación, mesas evaluadoras, cuadernillos y calendarios",
+      "Canal de mensajería y consultas pedagógicas directas entre estudiantes y profesores"
+    ],
+    highlights: ["Escuelas y Docentes", "Informes R.I.T.E.", "Simulador de Roles", "Boletines PDF"],
+    whatsappText: "¡Hola Vanina! Quisiera solicitar un presupuesto sobre EduTrayectoria | Plataforma Educativa para mi institución."
   }
 ];
 
@@ -250,6 +272,20 @@ const DEMOS_DATA = [
     description: "Sitio web de viajes boutique de diseño de alto nivel: catálogo de paquetes y salidas grupales, itinerarios cuidados, formulario de reservas y panel administrador CRM de leads y consultas.",
     tags: ["Catálogo de Viajes", "Panel CRM Turístico", "Formularios", "Diseño Premium"],
     whatsappText: "¡Hola Vanina! Vi tu desarrollo para *Rutas del Alma Viajes* (https://tribu-de-viajeras.vercel.app/) y me parece excelente. Quisiera consultar por una web profesional para mi agencia o servicio."
+  },
+  {
+    id: "demo-edutrayectoria",
+    title: "EduTrayectoria",
+    subtitle: "Plataforma Institucional & Trayectorias Escolares",
+    category: "educacion",
+    badge: "Educación & Gestión",
+    url: "https://edutrayectoria-opal.vercel.app/",
+    displayUrl: "edutrayectoria-opal.vercel.app",
+    icon: "fa-graduation-cap",
+    gradient: "from-blue-700 via-indigo-700 to-slate-900",
+    description: "Sistema institucional de trayectorias educativas y régimen académico: acreditación por materia, informes R.I.T.E., materias adeudadas, sábanas de notas, simulador de roles (estudiante, docente, preceptoría) y descarga de boletines.",
+    tags: ["Trayectorias R.I.T.E.", "Simulador de Roles", "Boletines PDF", "Materias Adeudadas", "Plantel Docente"],
+    whatsappText: "¡Hola Vanina! Estuve probando la plataforma de *EduTrayectoria* (https://edutrayectoria-opal.vercel.app/) y me interesa un sistema o plataforma web similar. ¿Podemos coordinar?"
   }
 ];
 
@@ -261,7 +297,8 @@ const CALCULATOR_SERVICES = [
   { id: "calc-pos", name: "Sistema POS Pro (Ventas de Mostrador & Caja)", cat: "Gestión" },
   { id: "calc-web", name: "Página Web / Landing Page Institucional", cat: "Diseño Web" },
   { id: "calc-auto", name: "Automatizaciones & Generación de PDF", cat: "Productividad" },
-  { id: "calc-grafica", name: "Diseño de Flyers, Folletería o Catálogo Digital", cat: "Gráfica" }
+  { id: "calc-grafica", name: "Diseño de Flyers, Folletería o Catálogo Digital", cat: "Gráfica" },
+  { id: "calc-edu", name: "Plataforma Educativa – EduTrayectoria", cat: "Educación" }
 ];
 
 // Función utilitaria para generar links de WhatsApp
@@ -343,20 +380,39 @@ function renderProducts(category) {
         </div>
       </div>
 
-      <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-stretch gap-2.5">
-        <button 
-          onclick="openProductModal('${prod.id}')" 
-          class="btn-secondary px-4 py-2.5 rounded-xl font-semibold text-xs flex items-center justify-center gap-2 flex-1">
-          <i class="fa-solid fa-eye"></i> Ver Detalle & Volante
-        </button>
-        <a 
-          href="${waLink}" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="btn-whatsapp px-4 py-2.5 rounded-xl font-semibold text-xs flex items-center justify-center gap-2 flex-1 text-center">
-          <i class="fa-brands fa-whatsapp text-sm"></i> Consultar Demo
-        </a>
-      </div>
+      ${prod.id === 'edutrayectoria' ? `
+        <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-stretch gap-2.5">
+          <a 
+            href="${prod.demoUrl}" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="btn-secondary px-4 py-2.5 rounded-xl font-semibold text-xs flex items-center justify-center gap-2 flex-1 text-center">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver plataforma
+          </a>
+          <a 
+            href="${waLink}" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="btn-whatsapp px-4 py-2.5 rounded-xl font-semibold text-xs flex items-center justify-center gap-2 flex-1 text-center">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Solicitar presupuesto
+          </a>
+        </div>
+      ` : `
+        <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-stretch gap-2.5">
+          <button 
+            onclick="openProductModal('${prod.id}')" 
+            class="btn-secondary px-4 py-2.5 rounded-xl font-semibold text-xs flex items-center justify-center gap-2 flex-1">
+            <i class="fa-solid fa-eye"></i> Ver Detalle & Volante
+          </button>
+          <a 
+            href="${waLink}" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="btn-whatsapp px-4 py-2.5 rounded-xl font-semibold text-xs flex items-center justify-center gap-2 flex-1 text-center">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Consultar Demo
+          </a>
+        </div>
+      `}
     `;
 
     container.appendChild(card);
