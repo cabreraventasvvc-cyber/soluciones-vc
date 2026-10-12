@@ -12,7 +12,7 @@ const PRODUCTS_DATA = [
   {
     id: "tienda-online",
     name: "Tienda Online (E-Commerce)",
-    shortDesc: "Tu propio ecommerce completo, fácil de usar y administrar. Vendé más todos los días.",
+    shortDesc: "Tiendas online para emprendedores: catálogo interactivo, carrito ágil y pedidos directos a WhatsApp.",
     category: "ecommerce",
     badge: "Más Vendido",
     icon: "fa-shopping-cart",
@@ -35,7 +35,7 @@ const PRODUCTS_DATA = [
   {
     id: "control-stock",
     name: "Control de Stock & Inventario",
-    shortDesc: "Simple • Rápido • Eficiente. Tené el control total de tus productos y compras.",
+    shortDesc: "Sistemas de gestión para comercios: control de inventario en tiempo real, alertas y compras inteligentes.",
     category: "gestion",
     badge: "Alta Demanda",
     icon: "fa-boxes-stacked",
@@ -121,7 +121,7 @@ const PRODUCTS_DATA = [
   {
     id: "diseno-web",
     name: "Diseño Web & Landing Pages",
-    shortDesc: "Páginas web modernas, veloces y adaptadas a celular para comercios y profesionales.",
+    shortDesc: "Creación de páginas web profesionales en Quilmes y Buenos Aires. Ultra veloces y adaptadas a celular.",
     category: "diseno",
     badge: "A Medida",
     icon: "fa-globe",
@@ -142,7 +142,7 @@ const PRODUCTS_DATA = [
   {
     id: "formularios-auto",
     name: "Formularios y Automatizaciones",
-    shortDesc: "Respuestas automáticas, registros de clientes y generación automática de PDFs.",
+    shortDesc: "Automatización de procesos empresariales, registros de clientes y generación automática de PDFs.",
     category: "diseno",
     badge: "Productividad",
     icon: "fa-file-signature",
@@ -276,15 +276,15 @@ const DEMOS_DATA = [
   {
     id: "demo-edutrayectoria",
     title: "EduTrayectoria",
-    subtitle: "Plataforma Institucional & Trayectorias Escolares",
+    subtitle: "Plataforma Educativa para Escuelas, Institutos y Docentes",
     category: "educacion",
     badge: "Educación & Gestión",
     url: "https://edutrayectoria-opal.vercel.app/",
     displayUrl: "edutrayectoria-opal.vercel.app",
     icon: "fa-graduation-cap",
     gradient: "from-blue-700 via-indigo-700 to-slate-900",
-    description: "Sistema institucional de trayectorias educativas y régimen académico: acreditación por materia, informes R.I.T.E., materias adeudadas, sábanas de notas, simulador de roles (estudiante, docente, preceptoría) y descarga de boletines.",
-    tags: ["Trayectorias R.I.T.E.", "Simulador de Roles", "Boletines PDF", "Materias Adeudadas", "Plantel Docente"],
+    description: "Plataforma educativa digital e institucional: seguimiento de trayectorias escolares, régimen académico con acreditación por materia, informes R.I.T.E., sábanas de notas oficiales en PDF/Excel y simulador de roles para estudiantes, profesores y directivos.",
+    tags: ["Escuelas & Docentes", "Informes R.I.T.E.", "Simulador de Roles", "Boletines PDF", "Materias Adeudadas"],
     whatsappText: "¡Hola Vanina! Estuve probando la plataforma de *EduTrayectoria* (https://edutrayectoria-opal.vercel.app/) y me interesa un sistema o plataforma web similar. ¿Podemos coordinar?"
   }
 ];
