@@ -1,0 +1,7 @@
+# robots.txt para Soluciones VC (https://solucionesvc.com.ar / https://www.solucionesvc.com.ar)
+User-agent: *
+Allow: /
+
+# Ubicación del Sitemap oficial para Google y motores de búsqueda
+Sitemap: https://www.solucionesvc.com.ar/sitemap.xml
+Sitemap: https://solucionesvc.com.ar/sitemap.xml
