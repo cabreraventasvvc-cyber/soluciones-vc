@@ -198,7 +198,7 @@ const PRODUCTS_DATA = [
     name: "EduTrayectoria | Plataforma Educativa",
     shortDesc: "Plataforma educativa digital para escuelas, institutos, academias y docentes. Una solución personalizable que permite incorporar tecnología a los procesos de enseñanza y aprendizaje.",
     problemSolved: "Planillas de notas dispersas, dificultad para seguir trayectorias pedagógicas y boletines manuales engorrosos.",
-    mainBenefit: "Centralizá calificaciones R.I.T.E., materias adeudadas y exportá sábanas de notas oficiales en PDF/Excel en un clic.",
+    mainBenefit: "Centralizá el registro de calificaciones R.I.T.E., materias adeudadas y organizá el seguimiento pedagógico de tus estudiantes.",
     category: "educacion",
     badge: "Plataforma Educativa",
     icon: "fa-graduation-cap",
@@ -209,7 +209,7 @@ const PRODUCTS_DATA = [
     features: [
       "Plataforma educativa digital personalizable para escuelas, institutos, academias y docentes",
       "Seguimiento integral de trayectorias escolares, régimen académico y materias adeudadas",
-      "Planilla oficial de calificaciones R.I.T.E. con exportación directa a PDF y Excel (CSV)",
+      "Planilla digital de calificaciones R.I.T.E. con modelos de seguimiento y reportes para la institución",
       "Simulador de roles: experiencia diferenciada para Estudiante, Docente y Preceptoría / Directivo",
       "Gestión de períodos de intensificación, mesas evaluadoras, cuadernillos y calendarios",
       "Canal de mensajería y consultas pedagógicas directas entre estudiantes y profesores"
@@ -418,20 +418,27 @@ function renderProducts(category) {
       </div>
 
       ${prod.id === 'edutrayectoria' ? `
-        <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-stretch gap-2">
+        <div class="pt-4 border-t border-slate-100 flex flex-col gap-2">
+          <div class="flex flex-col sm:flex-row items-stretch gap-2">
+            <a 
+              href="${prod.demoUrl}" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="btn-secondary px-3 py-2.5 rounded-xl font-semibold text-xs flex items-center justify-center gap-1.5 flex-1 text-center">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver plataforma
+            </a>
+            <a 
+              href="${waLink}" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="btn-whatsapp px-3 py-2.5 rounded-xl font-semibold text-xs flex items-center justify-center gap-1.5 flex-1 text-center">
+              <i class="fa-brands fa-whatsapp text-sm"></i> Solicitar presupuesto
+            </a>
+          </div>
           <a 
-            href="${prod.demoUrl}" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            class="btn-secondary px-3 py-2.5 rounded-xl font-semibold text-xs flex items-center justify-center gap-1.5 flex-1 text-center">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver plataforma
-          </a>
-          <a 
-            href="${waLink}" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            class="btn-whatsapp px-3 py-2.5 rounded-xl font-semibold text-xs flex items-center justify-center gap-1.5 flex-1 text-center">
-            <i class="fa-brands fa-whatsapp text-sm"></i> Solicitar presupuesto
+            href="/edutrayectoria" 
+            class="w-full text-center text-xs font-bold text-indigo-600 hover:text-indigo-800 hover:underline pt-1 block transition">
+            Conocer presentación institucional →
           </a>
         </div>
       ` : `
