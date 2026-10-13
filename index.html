@@ -288,12 +288,38 @@
         <a href="#inicio" class="hover:text-indigo-600 transition">Inicio</a>
         <a href="#productos" class="hover:text-indigo-600 transition">Soluciones</a>
         <a href="#demos" class="hover:text-pink-600 transition flex items-center gap-1.5 font-bold text-pink-600 bg-pink-50/90 px-3 py-1.5 rounded-full border border-pink-200 shadow-sm hover:scale-105">
-          <span class="w-2 h-2 rounded-full bg-pink-500 animate-pulse"></span> Demos en Vivo
+          <span class="w-2 h-2 rounded-full bg-pink-500 animate-pulse"></span> Demostraciones
         </a>
-        <a href="#volantes" class="hover:text-indigo-600 transition">Volantes</a>
-        <a href="#cotizador" class="hover:text-indigo-600 transition">Armar Paquete</a>
-        <a href="#beneficios" class="hover:text-indigo-600 transition">Beneficios</a>
-        <a href="#faq" class="hover:text-indigo-600 transition">Preguntas</a>
+
+        <!-- Menú Desplegable "Más Opciones" -->
+        <div class="relative group py-2">
+          <button type="button" class="hover:text-indigo-600 transition flex items-center gap-1 font-semibold focus:outline-none">
+            <span>Más Opciones</span>
+            <i class="fa-solid fa-chevron-down text-[10px] text-slate-400 group-hover:text-indigo-600 group-hover:rotate-180 transition-transform"></i>
+          </button>
+          
+          <div class="absolute left-0 top-full pt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div class="bg-white rounded-2xl shadow-xl border border-slate-200/90 p-2 space-y-1">
+              <a href="#volantes" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/70 transition">
+                <i class="fa-solid fa-file-lines text-indigo-500 w-4 text-center"></i>
+                <span>Volantes Informativos</span>
+              </a>
+              <a href="#cotizador" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/70 transition">
+                <i class="fa-solid fa-calculator text-purple-500 w-4 text-center"></i>
+                <span>Armar Paquete (Cotizador)</span>
+              </a>
+              <a href="#beneficios" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/70 transition">
+                <i class="fa-solid fa-star text-pink-500 w-4 text-center"></i>
+                <span>Beneficios Clave</span>
+              </a>
+              <a href="#faq" class="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:text-indigo-600 hover:bg-indigo-50/70 transition">
+                <i class="fa-solid fa-circle-question text-blue-500 w-4 text-center"></i>
+                <span>Preguntas Frecuentes</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
         <a href="#contacto" class="hover:text-indigo-600 transition flex items-center gap-1.5 text-indigo-700 font-bold bg-indigo-50 px-3 py-1.5 rounded-full border border-indigo-100">
           <i class="fa-solid fa-envelope text-xs"></i> Contacto & Formulario
         </a>
@@ -301,7 +327,7 @@
 
       <!-- Botón Contacto WhatsApp -->
       <div class="hidden sm:flex items-center gap-3">
-        <a href="https://wa.me/5491134352310?text=Hola%20Vanina!%20Quiero%20pedirte%20información%20sobre%20tus%20soluciones%20digitales" 
+        <a href="https://wa.me/5491134352310?text=Hola%20Vanina,%20visité%20Soluciones%20VC%20y%20quisiera%20solicitar%20un%20presupuesto%20para%20mi%20proyecto." 
            target="_blank" 
            rel="noopener noreferrer"
            class="btn-whatsapp py-2.5 px-5 rounded-full font-bold text-xs flex items-center gap-2">
@@ -316,27 +342,49 @@
       </button>
     </div>
 
-    <!-- Menú Desplegable Móvil -->
-    <div id="mobile-nav" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-5 space-y-3.5 shadow-xl">
-      <a href="#inicio" class="block font-semibold text-slate-700 hover:text-indigo-600">Inicio</a>
-      <a href="#productos" class="block font-semibold text-slate-700 hover:text-indigo-600">Soluciones Digitales</a>
-      <a href="#demos" class="block font-bold text-pink-600 hover:text-pink-700 flex items-center gap-2 bg-pink-50 p-3 rounded-xl border border-pink-200">
-        <span class="w-2.5 h-2.5 rounded-full bg-pink-500 animate-pulse"></span>
-        <span>Demos en Vivo (6 Casos Reales)</span>
-      </a>
-      <a href="#volantes" class="block font-semibold text-slate-700 hover:text-indigo-600">Volantes</a>
-      <a href="#cotizador" class="block font-semibold text-slate-700 hover:text-indigo-600">Armar Paquete</a>
-      <a href="#beneficios" class="block font-semibold text-slate-700 hover:text-indigo-600">Beneficios</a>
-      <a href="#faq" class="block font-semibold text-slate-700 hover:text-indigo-600">Preguntas Frecuentes</a>
-      <a href="#contacto" class="block font-bold text-indigo-700 hover:text-indigo-900 flex items-center gap-2 bg-indigo-50 p-2.5 rounded-xl">
-        <i class="fa-solid fa-envelope"></i> Formulario de Contacto & Mail
-      </a>
-      <div class="pt-3 border-t border-slate-100">
-        <a href="https://wa.me/5491134352310?text=Hola,%20visité%20Soluciones%20VC%20y%20quisiera%20recibir%20información%20y%20un%20presupuesto%20para%20mi%20proyecto." 
+    <!-- Menú Desplegable Móvil Optimizado -->
+    <div id="mobile-nav" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-5 space-y-4 shadow-2xl max-h-[85vh] overflow-y-auto">
+      <!-- Grupo 1: Navegación Principal -->
+      <div class="space-y-2">
+        <p class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Navegación Principal</p>
+        <a href="#inicio" class="block font-semibold text-slate-800 hover:text-indigo-600 py-1">Inicio</a>
+        <a href="#productos" class="block font-semibold text-slate-800 hover:text-indigo-600 py-1">Soluciones Digitales</a>
+        <a href="#demos" class="block font-bold text-pink-600 hover:text-pink-700 flex items-center gap-2 bg-pink-50 p-2.5 rounded-xl border border-pink-200">
+          <span class="w-2.5 h-2.5 rounded-full bg-pink-500 animate-pulse"></span>
+          <span>Demostraciones en Vivo (6 Casos Reales)</span>
+        </a>
+      </div>
+
+      <!-- Grupo 2: Herramientas y Servicios -->
+      <div class="pt-3 border-t border-slate-100 space-y-2">
+        <p class="text-[10px] uppercase font-bold tracking-wider text-slate-400">Herramientas & Servicios</p>
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <a href="#volantes" class="p-2.5 rounded-xl bg-slate-50 font-semibold text-slate-700 hover:text-indigo-600 flex items-center gap-2 border border-slate-100">
+            <i class="fa-solid fa-file-lines text-indigo-500"></i> Volantes
+          </a>
+          <a href="#cotizador" class="p-2.5 rounded-xl bg-slate-50 font-semibold text-slate-700 hover:text-indigo-600 flex items-center gap-2 border border-slate-100">
+            <i class="fa-solid fa-calculator text-purple-500"></i> Armar Paquete
+          </a>
+          <a href="#beneficios" class="p-2.5 rounded-xl bg-slate-50 font-semibold text-slate-700 hover:text-indigo-600 flex items-center gap-2 border border-slate-100">
+            <i class="fa-solid fa-star text-pink-500"></i> Beneficios
+          </a>
+          <a href="#faq" class="p-2.5 rounded-xl bg-slate-50 font-semibold text-slate-700 hover:text-indigo-600 flex items-center gap-2 border border-slate-100">
+            <i class="fa-solid fa-circle-question text-blue-500"></i> Preguntas
+          </a>
+        </div>
+      </div>
+
+      <!-- Grupo 3: Contacto -->
+      <div class="pt-3 border-t border-slate-100 space-y-2.5">
+        <a href="#contacto" class="block font-bold text-indigo-700 hover:text-indigo-900 flex items-center gap-2 bg-indigo-50 p-2.5 rounded-xl border border-indigo-100 text-xs">
+          <i class="fa-solid fa-envelope"></i> Contacto y Formulario
+        </a>
+        <a href="https://wa.me/5491134352310?text=Hola%20Vanina,%20visité%20Soluciones%20VC%20y%20quisiera%20solicitar%20un%20presupuesto%20para%20mi%20proyecto." 
            target="_blank" 
+           rel="noopener noreferrer"
            class="btn-whatsapp py-3 px-5 rounded-xl font-bold text-sm flex items-center justify-center gap-2 w-full text-center">
           <i class="fa-brands fa-whatsapp text-lg"></i>
-          Solicitá tu presupuesto por WhatsApp
+          Solicitar presupuesto por WhatsApp
         </a>
       </div>
     </div>
@@ -391,18 +439,19 @@
           </div>
 
           <!-- Botones de Acción -->
-          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5">
-            <a href="https://wa.me/5491134352310?text=Hola,%20visité%20Soluciones%20VC%20y%20quisiera%20recibir%20información%20y%20un%20presupuesto%20para%20mi%20proyecto." 
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="https://wa.me/5491134352310?text=Hola%20Vanina,%20visité%20Soluciones%20VC%20y%20quisiera%20solicitar%20un%20presupuesto%20para%20mi%20proyecto." 
                target="_blank" 
-               class="btn-whatsapp py-3.5 px-6 rounded-full font-bold text-sm w-full sm:w-auto text-center flex items-center justify-center gap-2 shadow-lg hover:scale-105 transition">
-              <i class="fa-brands fa-whatsapp text-lg"></i> Solicitá tu presupuesto por WhatsApp
+               rel="noopener noreferrer"
+               class="btn-whatsapp py-3.5 px-7 rounded-full font-bold text-sm sm:text-base w-full sm:w-auto text-center flex items-center justify-center gap-2.5 shadow-xl hover:scale-105 transition">
+              <i class="fa-brands fa-whatsapp text-xl"></i>
+              <span>Solicitar presupuesto</span>
             </a>
-            <a href="#productos" class="btn-secondary py-3.5 px-6 rounded-full font-bold text-sm w-full sm:w-auto text-center flex items-center justify-center gap-2 hover:scale-105 transition">
-              <i class="fa-solid fa-comments"></i> Consultá por tu proyecto
-            </a>
-            <a href="#demos" class="btn-primary py-3.5 px-7 rounded-full font-bold text-sm w-full sm:w-auto text-center flex items-center justify-center gap-2.5 shadow-xl hover:scale-105 transition">
+            <a href="#demos" 
+               class="btn-primary py-3.5 px-7 rounded-full font-bold text-sm sm:text-base w-full sm:w-auto text-center flex items-center justify-center gap-2.5 shadow-xl hover:scale-105 transition">
               <span class="w-2.5 h-2.5 rounded-full bg-pink-300 animate-pulse"></span>
-              <i class="fa-solid fa-play text-xs"></i> Ver Demos en Vivo (6 Casos Reales)
+              <i class="fa-solid fa-play text-xs"></i>
+              <span>Ver demostraciones</span>
             </a>
           </div>
 
@@ -574,20 +623,21 @@
     </div>
   </section>
 
-  <!-- Sección de Demos en Vivo & Proyectos Reales -->
-  <section id="demos" class="py-20 lg:py-28 bg-gradient-to-b from-slate-50 via-indigo-50/20 to-white border-t border-slate-200/80">
+  <!-- Sección de Proyectos y Soluciones Desarrolladas (Demos en Vivo) -->
+  <section id="demos" class="relative py-20 lg:py-28 bg-gradient-to-b from-slate-50 via-indigo-50/20 to-white border-t border-slate-200/80">
+    <div id="proyectos" class="absolute -top-20"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-12">
         <span class="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-pink-600 bg-pink-50 px-3.5 py-1.5 rounded-full border border-pink-200 shadow-xs mb-3">
           <span class="w-2 h-2 rounded-full bg-pink-500 animate-pulse"></span>
-          <span>Proyectos Reales en Internet</span>
+          <span>Experiencia Real & Casos Funcionales</span>
         </span>
         <h2 class="text-3xl sm:text-5xl font-black text-slate-900 mt-2 mb-4 tracking-tight">
-          Demos en Vivo Diseñadas por Vanina Cabrera
+          Proyectos y Soluciones Desarrolladas
         </h2>
         <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-          Navegá y probá cada desarrollo directamente en tu celular o computadora. Todos estos ejemplos son sitios web y aplicaciones <strong>reales, funcionales y listos para interactuar</strong>.
+          Demostraciones en vivo y plataformas reales listas para probar en tu celular o computadora. Cada desarrollo resuelve necesidades concretas de comercialización, organización y gestión comercial.
         </p>
 
         <!-- Banner informativo para clientes y Vanina -->
@@ -1386,22 +1436,25 @@
     </div>
   </div>
 
-  <!-- Botón Flotante de WhatsApp -->
-  <a href="https://wa.me/5491134352310?text=Hola,%20visité%20Soluciones%20VC%20y%20quisiera%20recibir%20información%20y%20un%20presupuesto%20para%20mi%20proyecto." 
-     target="_blank" 
-     rel="noopener noreferrer"
-     class="floating-whatsapp group"
-     aria-label="Contactar por WhatsApp">
-    
-    <div class="floating-whatsapp-tooltip hidden sm:flex">
-      <span class="text-xs">¡Hablemos por WhatsApp! Solicitá tu presupuesto 👋</span>
+  <!-- Botón Flotante de WhatsApp Optimizado -->
+  <div id="floating-whatsapp-wrapper" class="floating-whatsapp">
+    <div id="floating-whatsapp-tooltip" class="floating-whatsapp-tooltip hidden sm:flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      <span class="text-xs text-slate-700 font-semibold">¿Tenés dudas? Escribime 👋</span>
+      <button id="close-wa-tooltip" type="button" class="text-slate-400 hover:text-slate-700 ml-1 text-sm font-bold leading-none p-0.5 cursor-pointer" aria-label="Cerrar mensaje">
+        &times;
+      </button>
     </div>
 
-    <div class="floating-whatsapp-btn">
+    <a href="https://wa.me/5491134352310?text=Hola%20Vanina,%20visité%20Soluciones%20VC%20y%20quisiera%20solicitar%20un%20presupuesto%20para%20mi%20proyecto." 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="floating-whatsapp-btn group"
+       aria-label="Contactar a Vanina Cabrera por WhatsApp">
       <i class="fa-brands fa-whatsapp"></i>
       <span class="ping-badge"></span>
-    </div>
-  </a>
+    </a>
+  </div>
 
   <!-- Toast de Notificación de Enlace Copiado -->
   <div id="toast-notification" class="bg-slate-900 text-white px-5 py-3 rounded-2xl shadow-2xl border border-slate-700 flex items-center gap-3">

@@ -13,6 +13,8 @@ const PRODUCTS_DATA = [
     id: "tienda-online",
     name: "Tienda Online (E-Commerce)",
     shortDesc: "Tiendas online para emprendedores: catálogo interactivo, carrito ágil y pedidos directos a WhatsApp.",
+    problemSolved: "Consultas repetitivas de precios a toda hora, pedidos desordenados por chat y ventas perdidas por no tener catálogo online.",
+    mainBenefit: "Automatizá tus ventas 24/7 y recibí cada pedido listo en tu WhatsApp sin pagar comisiones por venta.",
     category: "ecommerce",
     badge: "Más Vendido",
     icon: "fa-shopping-cart",
@@ -36,6 +38,8 @@ const PRODUCTS_DATA = [
     id: "control-stock",
     name: "Control de Stock & Inventario",
     shortDesc: "Sistemas de gestión para comercios: control de inventario en tiempo real, alertas y compras inteligentes.",
+    problemSolved: "Desconocimiento del stock real, pérdidas por mercadería vencida o faltante y horas perdidas contando productos a mano.",
+    mainBenefit: "Ahorrá horas de conteo manual y recibí alertas de stock bajo antes de quedarte sin mercadería para vender.",
     category: "gestion",
     badge: "Alta Demanda",
     icon: "fa-boxes-stacked",
@@ -57,6 +61,8 @@ const PRODUCTS_DATA = [
     id: "app-turnos",
     name: "App para Turnos y Reservas",
     shortDesc: "Especial para peluquerías, salones de belleza, barberías y estética. En la palma de tu mano.",
+    problemSolved: "Llamadas y mensajes a deshora para coordinar citas, superposición de turnos y clientes que faltan sin previo aviso.",
+    mainBenefit: "Tus clientes reservan solos 24/7 desde el celular y reciben recordatorios automáticos reduciendo ausencias.",
     category: "turnos",
     badge: "Favorito Salones",
     icon: "fa-calendar-check",
@@ -80,6 +86,8 @@ const PRODUCTS_DATA = [
     id: "apps-comercios",
     name: "Apps para Comercios (PWA)",
     shortDesc: "Aplicaciones web ligeras para verdulerías, showrooms, almacenes y emprendimientos.",
+    problemSolved: "Comisiones abusivas de aplicaciones de delivery e intermediarios que reducen tu margen de ganancia.",
+    mainBenefit: "Tu propio canal de venta directo en el celular del cliente, con pedidos express a tu WhatsApp y 100% de ganancia para vos.",
     category: "ecommerce",
     badge: "Ágil & Liviana",
     icon: "fa-mobile-screen-button",
@@ -101,6 +109,8 @@ const PRODUCTS_DATA = [
     id: "pos-pro",
     name: "Sistema POS Pro (Punto de Venta)",
     shortDesc: "Ventas rápidas en mostrador, apertura/cierre de caja, tickets y control comercial.",
+    problemSolved: "Filas lentas en el mostrador, cuentas manuales propensas a errores y descuadres de caja al cerrar el día.",
+    mainBenefit: "Agilizá el cobro en mostrador, imprimí tickets al instante y realizá cierres de caja con total precisión en segundos.",
     category: "gestion",
     badge: "Comercial",
     icon: "fa-cash-register",
@@ -122,6 +132,8 @@ const PRODUCTS_DATA = [
     id: "diseno-web",
     name: "Diseño Web & Landing Pages",
     shortDesc: "Creación de páginas web profesionales en Quilmes y Buenos Aires. Ultra veloces y adaptadas a celular.",
+    problemSolved: "Falta de presencia digital o páginas web desactualizadas que transmiten poca seriedad a clientes potenciales.",
+    mainBenefit: "Proyectá una imagen profesional y confiable que transmite seguridad inmediata y multiplica tus consultas.",
     category: "diseno",
     badge: "A Medida",
     icon: "fa-globe",
@@ -143,6 +155,8 @@ const PRODUCTS_DATA = [
     id: "formularios-auto",
     name: "Formularios y Automatizaciones",
     shortDesc: "Automatización de procesos empresariales, registros de clientes y generación automática de PDFs.",
+    problemSolved: "Carga manual de datos repetitiva, desorganización en planillas y demoras al enviar presupuestos a clientes.",
+    mainBenefit: "Ahorrá tiempo valioso automatizando tareas administrativas y generando presupuestos en PDF con tu marca al instante.",
     category: "diseno",
     badge: "Productividad",
     icon: "fa-file-signature",
@@ -162,6 +176,8 @@ const PRODUCTS_DATA = [
     id: "diseno-folleteria",
     name: "Diseño Digital & Folletería",
     shortDesc: "Flyers, folletos publicitarios, catálogos digitales interactivos y piezas para redes.",
+    problemSolved: "Publicidad improvisada con baja calidad visual que no logra captar la atención de tu público.",
+    mainBenefit: "Piezas gráficas y catálogos en PDF diseñados para vender, listos para enviar por WhatsApp o imprimir.",
     category: "diseno",
     badge: "Creativo",
     icon: "fa-palette",
@@ -181,6 +197,8 @@ const PRODUCTS_DATA = [
     id: "edutrayectoria",
     name: "EduTrayectoria | Plataforma Educativa",
     shortDesc: "Plataforma educativa digital para escuelas, institutos, academias y docentes. Una solución personalizable que permite incorporar tecnología a los procesos de enseñanza y aprendizaje.",
+    problemSolved: "Planillas de notas dispersas, dificultad para seguir trayectorias pedagógicas y boletines manuales engorrosos.",
+    mainBenefit: "Centralizá calificaciones R.I.T.E., materias adeudadas y exportá sábanas de notas oficiales en PDF/Excel en un clic.",
     category: "educacion",
     badge: "Plataforma Educativa",
     icon: "fa-graduation-cap",
@@ -317,6 +335,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initCalculatorLogic();
   initMobileMenu();
   initFaqAccordion();
+  initFloatingWhatsApp();
 });
 
 // Renderizar tarjetas de productos
@@ -336,8 +355,8 @@ function renderProducts(category) {
     
     // Lista de highlights (bullets principales)
     const highlightsHtml = prod.features.slice(0, 4).map(f => `
-      <li class="flex items-start gap-2.5 text-sm text-slate-600 mb-2">
-        <i class="fa-solid fa-circle-check text-indigo-600 mt-0.5 text-xs"></i>
+      <li class="flex items-start gap-2 text-xs text-slate-600 mb-1.5">
+        <i class="fa-solid fa-circle-check text-indigo-600 mt-0.5 text-[10px] flex-shrink-0"></i>
         <span>${f}</span>
       </li>
     `).join("");
@@ -355,8 +374,26 @@ function renderProducts(category) {
           </span>
         </div>
 
-        <h3 class="text-xl font-bold text-slate-900 mb-2">${prod.name}</h3>
-        <p class="text-sm text-slate-500 mb-4 leading-relaxed">${prod.shortDesc}</p>
+        <h3 class="text-xl font-bold text-slate-900 mb-1.5">${prod.name}</h3>
+        <p class="text-xs text-slate-500 mb-3.5 leading-relaxed">${prod.shortDesc}</p>
+
+        <!-- Bloque Comercial: Problema que resuelve y Beneficio Principal -->
+        <div class="mb-4 space-y-2 bg-slate-50/90 p-3 rounded-xl border border-slate-200/80 text-xs">
+          <div class="flex items-start gap-2 text-rose-800">
+            <i class="fa-solid fa-triangle-exclamation text-rose-500 mt-0.5 text-[11px] flex-shrink-0"></i>
+            <div>
+              <strong class="font-bold text-slate-800">Problema:</strong>
+              <span class="text-slate-600">${prod.problemSolved}</span>
+            </div>
+          </div>
+          <div class="flex items-start gap-2 text-emerald-800 pt-2 border-t border-slate-200/70">
+            <i class="fa-solid fa-circle-check text-emerald-500 mt-0.5 text-[11px] flex-shrink-0"></i>
+            <div>
+              <strong class="font-bold text-slate-800">Beneficio:</strong>
+              <span class="text-slate-600">${prod.mainBenefit}</span>
+            </div>
+          </div>
+        </div>
 
         ${prod.demoUrl ? `
           <div class="mb-4">
@@ -372,8 +409,8 @@ function renderProducts(category) {
           </div>
         ` : ''}
 
-        <div class="border-t border-slate-100 pt-3 mb-5">
-          <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Incluye:</p>
+        <div class="border-t border-slate-100 pt-3 mb-4">
+          <p class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2">Incluye:</p>
           <ul class="space-y-1">
             ${highlightsHtml}
           </ul>
@@ -381,35 +418,35 @@ function renderProducts(category) {
       </div>
 
       ${prod.id === 'edutrayectoria' ? `
-        <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-stretch gap-2.5">
+        <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-stretch gap-2">
           <a 
             href="${prod.demoUrl}" 
             target="_blank" 
             rel="noopener noreferrer" 
-            class="btn-secondary px-4 py-2.5 rounded-xl font-semibold text-xs flex items-center justify-center gap-2 flex-1 text-center">
+            class="btn-secondary px-3 py-2.5 rounded-xl font-semibold text-xs flex items-center justify-center gap-1.5 flex-1 text-center">
             <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver plataforma
           </a>
           <a 
             href="${waLink}" 
             target="_blank" 
             rel="noopener noreferrer" 
-            class="btn-whatsapp px-4 py-2.5 rounded-xl font-semibold text-xs flex items-center justify-center gap-2 flex-1 text-center">
+            class="btn-whatsapp px-3 py-2.5 rounded-xl font-semibold text-xs flex items-center justify-center gap-1.5 flex-1 text-center">
             <i class="fa-brands fa-whatsapp text-sm"></i> Solicitar presupuesto
           </a>
         </div>
       ` : `
-        <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-stretch gap-2.5">
+        <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-stretch gap-2">
           <button 
             onclick="openProductModal('${prod.id}')" 
-            class="btn-secondary px-4 py-2.5 rounded-xl font-semibold text-xs flex items-center justify-center gap-2 flex-1">
-            <i class="fa-solid fa-eye"></i> Ver Detalle & Volante
+            class="btn-secondary px-3 py-2.5 rounded-xl font-semibold text-xs flex items-center justify-center gap-1.5 flex-1">
+            <i class="fa-solid fa-eye"></i> Detalle & Volante
           </button>
           <a 
             href="${waLink}" 
             target="_blank" 
             rel="noopener noreferrer" 
-            class="btn-whatsapp px-4 py-2.5 rounded-xl font-semibold text-xs flex items-center justify-center gap-2 flex-1 text-center">
-            <i class="fa-brands fa-whatsapp text-sm"></i> Consultar Demo
+            class="btn-whatsapp px-3 py-2.5 rounded-xl font-semibold text-xs flex items-center justify-center gap-1.5 flex-1 text-center">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Solicitar presupuesto
           </a>
         </div>
       `}
@@ -609,7 +646,25 @@ function openProductModal(productId) {
             <i class="fa-solid ${product.icon}"></i> ${product.badge}
           </div>
           <h2 class="text-2xl font-black text-slate-900 mb-2">${product.name}</h2>
-          <p class="text-slate-600 text-sm mb-4 leading-relaxed">${product.shortDesc}</p>
+          <p class="text-slate-600 text-sm mb-3 leading-relaxed">${product.shortDesc}</p>
+
+          <!-- Bloque Comercial en Modal -->
+          <div class="mb-5 space-y-2.5 bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs">
+            <div class="flex items-start gap-2.5 text-rose-800">
+              <i class="fa-solid fa-triangle-exclamation text-rose-500 mt-0.5 text-xs flex-shrink-0"></i>
+              <div>
+                <strong class="font-bold text-slate-800">Problema que resuelve:</strong>
+                <p class="text-slate-600 mt-0.5">${product.problemSolved}</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-2.5 text-emerald-800 pt-2 border-t border-slate-200">
+              <i class="fa-solid fa-circle-check text-emerald-500 mt-0.5 text-xs flex-shrink-0"></i>
+              <div>
+                <strong class="font-bold text-slate-800">Beneficio comercial principal:</strong>
+                <p class="text-slate-600 mt-0.5">${product.mainBenefit}</p>
+              </div>
+            </div>
+          </div>
 
           ${product.demoUrl ? `
             <div class="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white p-4 rounded-2xl mb-5 shadow-lg flex flex-col sm:flex-row items-center justify-between gap-3">
@@ -645,7 +700,7 @@ function openProductModal(productId) {
 
         <div class="flex flex-col sm:flex-row gap-3">
           <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="btn-whatsapp py-3 px-6 rounded-xl font-bold text-sm flex items-center justify-center gap-2 flex-1 shadow-lg">
-            <i class="fa-brands fa-whatsapp text-lg"></i> Pedir Demo por WhatsApp
+            <i class="fa-brands fa-whatsapp text-lg"></i> Solicitar Presupuesto por WhatsApp
           </a>
           <button onclick="closeProductModal()" class="py-3 px-5 rounded-xl border border-slate-300 font-semibold text-sm text-slate-600 hover:bg-slate-100 transition">
             Cerrar
@@ -813,6 +868,31 @@ function initMobileMenu() {
     link.addEventListener("click", () => {
       mobileNav.classList.add("hidden");
     });
+  });
+}
+
+// Comportamiento del botón flotante de WhatsApp y tooltip descartable
+function initFloatingWhatsApp() {
+  const closeBtn = document.getElementById("close-wa-tooltip");
+  const tooltip = document.getElementById("floating-whatsapp-tooltip");
+  if (!closeBtn || !tooltip) return;
+
+  // Si ya se descartó en esta sesión de navegación, no volver a mostrarlo
+  try {
+    if (sessionStorage.getItem("wa_tooltip_dismissed") === "true") {
+      tooltip.classList.add("hidden");
+      tooltip.classList.remove("sm:flex");
+    }
+  } catch (e) {}
+
+  closeBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    tooltip.classList.add("hidden");
+    tooltip.classList.remove("sm:flex");
+    try {
+      sessionStorage.setItem("wa_tooltip_dismissed", "true");
+    } catch (e) {}
   });
 }
 
