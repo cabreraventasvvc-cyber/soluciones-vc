@@ -216,6 +216,32 @@ const PRODUCTS_DATA = [
     ],
     highlights: ["Escuelas y Docentes", "Informes R.I.T.E.", "Simulador de Roles", "Boletines PDF"],
     whatsappText: "¡Hola Vanina! Quisiera solicitar un presupuesto sobre EduTrayectoria | Plataforma Educativa para mi institución."
+  },
+  {
+    id: "aulas-interactivas",
+    name: "Aulas Interactivas Digitales",
+    shortDesc: "Desarrollamos aulas virtuales interactivas con contenidos curriculares listos para implementar. Diseñamos espacios educativos digitales personalizados según la materia, el nivel educativo y las necesidades de cada docente o institución.",
+    problemSolved: "La dificultad de preparar, organizar y centralizar materiales digitales, actividades y evaluaciones para acompañar el aprendizaje de los estudiantes.",
+    mainBenefit: "Modernizá tus clases con contenidos organizados, actividades interactivas, juegos educativos y evaluaciones automáticas, todo en un mismo espacio digital.",
+    category: "educacion",
+    badge: "Nuevo servicio educativo",
+    icon: "fa-chalkboard-user",
+    gradient: "from-teal-600 via-emerald-600 to-cyan-700",
+    flyerImage: "assets/img/volante-aulas-interactivas.png",
+    demoUrl: "https://nticxvaninacabrera.com.ar/",
+    demoName: "Aula Interactiva NTICx",
+    features: [
+      "Unidades temáticas organizadas por contenidos curriculares",
+      "Explicaciones claras y materiales de estudio",
+      "Actividades y juegos interactivos",
+      "Evaluaciones con corrección automática",
+      "Resultados, puntajes y niveles de desempeño",
+      "Herramientas para el seguimiento del progreso",
+      "Acceso desde computadoras, tablets y celulares",
+      "Personalización según materia, contenidos y necesidades"
+    ],
+    highlights: ["Contenidos Curriculares", "Actividades y Juegos", "Evaluación Automática", "100% Celular y PC"],
+    whatsappText: "Hola, quisiera solicitar información y presupuesto para desarrollar un aula interactiva digital personalizada."
   }
 ];
 
@@ -301,9 +327,23 @@ const DEMOS_DATA = [
     displayUrl: "edutrayectoria-opal.vercel.app",
     icon: "fa-graduation-cap",
     gradient: "from-blue-700 via-indigo-700 to-slate-900",
-    description: "Plataforma educativa digital e institucional: seguimiento de trayectorias escolares, régimen académico con acreditación por materia, informes R.I.T.E., sábanas de notas oficiales en PDF/Excel y simulador de roles para estudiantes, profesores y directivos.",
+    description: "Plataforma educativa digital e institucional: seguimiento de trayectorias escolares, régimen académico con acreditación por materia, informes R.I.T.E., reportes en PDF/Excel y simulador de roles para estudiantes, profesores y directivos.",
     tags: ["Escuelas & Docentes", "Informes R.I.T.E.", "Simulador de Roles", "Boletines PDF", "Materias Adeudadas"],
     whatsappText: "¡Hola Vanina! Estuve probando la plataforma de *EduTrayectoria* (https://edutrayectoria-opal.vercel.app/) y me interesa un sistema o plataforma web similar. ¿Podemos coordinar?"
+  },
+  {
+    id: "demo-aulas-nticx",
+    title: "Aula Interactiva NTICx",
+    subtitle: "Ejemplo de aula educativa digital personalizada.",
+    category: "educacion",
+    badge: "Educación & Aulas",
+    url: "https://nticxvaninacabrera.com.ar/",
+    displayUrl: "nticxvaninacabrera.com.ar",
+    icon: "fa-chalkboard-user",
+    gradient: "from-teal-600 via-emerald-600 to-cyan-700",
+    description: "Explorá un ejemplo de aula interactiva con contenidos curriculares organizados, materiales de estudio, actividades prácticas, juegos y evaluaciones digitales.",
+    tags: ["Contenidos Curriculares", "Actividades Prácticas", "Juegos Educativos", "Evaluaciones Automáticas", "100% Celular y PC"],
+    whatsappText: "¡Hola Vanina! Estuve viendo el ejemplo de *Aula Interactiva NTICx* (https://nticxvaninacabrera.com.ar/) y quisiera solicitar información y presupuesto para desarrollar un aula interactiva digital personalizada."
   }
 ];
 
@@ -316,7 +356,8 @@ const CALCULATOR_SERVICES = [
   { id: "calc-web", name: "Página Web / Landing Page Institucional", cat: "Diseño Web" },
   { id: "calc-auto", name: "Automatizaciones & Generación de PDF", cat: "Productividad" },
   { id: "calc-grafica", name: "Diseño de Flyers, Folletería o Catálogo Digital", cat: "Gráfica" },
-  { id: "calc-edu", name: "Plataforma Educativa – EduTrayectoria", cat: "Educación" }
+  { id: "calc-edu", name: "Plataforma Educativa – EduTrayectoria", cat: "Educación" },
+  { id: "calc-aulas", name: "Aula Interactiva Digital Personalizada", cat: "Educación" }
 ];
 
 // Función utilitaria para generar links de WhatsApp
@@ -395,7 +436,7 @@ function renderProducts(category) {
           </div>
         </div>
 
-        ${prod.demoUrl ? `
+        ${prod.demoUrl && prod.id !== 'aulas-interactivas' ? `
           <div class="mb-4">
             <a 
               href="${prod.demoUrl}" 
@@ -439,6 +480,23 @@ function renderProducts(category) {
             href="/edutrayectoria" 
             class="w-full text-center text-xs font-bold text-indigo-600 hover:text-indigo-800 hover:underline pt-1 block transition">
             Conocer presentación institucional →
+          </a>
+        </div>
+      ` : prod.id === 'aulas-interactivas' ? `
+        <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-stretch gap-2">
+          <a 
+            href="https://nticxvaninacabrera.com.ar/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="btn-secondary px-3 py-2.5 rounded-xl font-semibold text-xs flex items-center justify-center gap-1.5 flex-1 text-center">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver aula de ejemplo
+          </a>
+          <a 
+            href="${waLink}" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="btn-whatsapp px-3 py-2.5 rounded-xl font-semibold text-xs flex items-center justify-center gap-1.5 flex-1 text-center">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Solicitar presupuesto
           </a>
         </div>
       ` : `
