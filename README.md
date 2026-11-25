@@ -1,6 +1,6 @@
 # VC - Vanina Cabrera | Soluciones Digitales
 
-Página web comercial moderna y de alta conversión desarrollada para exhibir y vender los productos y servicios digitales de **Vanina Cabrera - Soluciones Digitales**.-
+Página web comercial moderna y de alta conversión desarrollada para exhibir y vender los productos y servicios digitales de **Vanina Cabrera - Soluciones Digitales**.
 
 ---
 
@@ -82,6 +82,11 @@ Cuando un cliente te pida un ejemplo o demo, podés pasarle tu página principal
    - **Nombre:** Rutas del Alma Viajes
    - **Enlace Demo:** https://tribu-de-viajeras.vercel.app/
    - **Qué muestra:** Catálogo de paquetes y salidas grupales, itinerarios cuidados, formulario de reservas y panel CRM para gestión de consultas y clientes.
+
+6. **Plataforma Institucional & Trayectorias Escolares:**
+   - **Nombre:** EduTrayectoria
+   - **Enlace Demo:** https://edutrayectoria-opal.vercel.app/
+   - **Qué muestra:** Sistema institucional de trayectorias educativas y régimen académico: acreditación por materia, informes R.I.T.E., materias adeudadas, simulador de roles (estudiante, docente, preceptoría), sábanas de notas y descarga de boletines en PDF.
 
 ---
 
