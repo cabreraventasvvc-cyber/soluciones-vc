@@ -80,7 +80,7 @@ const PRODUCTS_DATA = [
       "Clientes felices y negocio mucho más organizado"
     ],
     highlights: ["Reservas 24/7", "Recordatorios automáticos", "Menos llamadas", "Fidelizá clientes"],
-    whatsappText: "¡Hola Vanina! Vi el volante de la App para Turnos y Reservas de peluquerías y salones. ¿Podemos coordinar una demo?"
+    whatsappText: "¡Hola Vanina! Vi la App para Turnos y Reservas de peluquerías y salones. ¿Podemos coordinar una demo?"
   },
   {
     id: "apps-comercios",
@@ -385,7 +385,7 @@ function renderProducts(category) {
   if (!container) return;
 
   const filtered = category === "all" 
-    ? PRODUCTS_DATA 
+    ? [...PRODUCTS_DATA].sort((a,b) => (["diseno-web","aulas-interactivas","edutrayectoria"].includes(a.id) ? ["diseno-web","aulas-interactivas","edutrayectoria"].indexOf(a.id) : 9) - (["diseno-web","aulas-interactivas","edutrayectoria"].includes(b.id) ? ["diseno-web","aulas-interactivas","edutrayectoria"].indexOf(b.id) : 9)) 
     : PRODUCTS_DATA.filter(p => p.category === category);
 
   container.innerHTML = "";
@@ -395,7 +395,7 @@ function renderProducts(category) {
     card.className = "product-card p-6 flex flex-col justify-between animate-fade-in";
     
     // Lista de highlights (bullets principales)
-    const highlightsHtml = prod.features.slice(0, 4).map(f => `
+    const highlightsHtml = prod.features.slice(0, 3).map(f => `
       <li class="flex items-start gap-2 text-xs text-slate-600 mb-1.5">
         <i class="fa-solid fa-circle-check text-indigo-600 mt-0.5 text-[10px] flex-shrink-0"></i>
         <span>${f}</span>
@@ -411,31 +411,14 @@ function renderProducts(category) {
             <i class="fa-solid ${prod.icon}"></i>
           </div>
           <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-100">
-            ${prod.badge}
+            ${prod.category === "educacion" ? "Educación" : prod.category === "gestion" ? "Gestión" : prod.category === "turnos" ? "Reservas" : prod.category === "ecommerce" ? "Comercio" : "Digital"}
           </span>
         </div>
 
         <h3 class="text-xl font-bold text-slate-900 mb-1.5">${prod.name}</h3>
         <p class="text-xs text-slate-500 mb-3.5 leading-relaxed">${prod.shortDesc}</p>
 
-        <!-- Bloque Comercial: Problema que resuelve y Beneficio Principal -->
-        <div class="mb-4 space-y-2 bg-slate-50/90 p-3 rounded-xl border border-slate-200/80 text-xs">
-          <div class="flex items-start gap-2 text-rose-800">
-            <i class="fa-solid fa-triangle-exclamation text-rose-500 mt-0.5 text-[11px] flex-shrink-0"></i>
-            <div>
-              <strong class="font-bold text-slate-800">Problema:</strong>
-              <span class="text-slate-600">${prod.problemSolved}</span>
-            </div>
-          </div>
-          <div class="flex items-start gap-2 text-emerald-800 pt-2 border-t border-slate-200/70">
-            <i class="fa-solid fa-circle-check text-emerald-500 mt-0.5 text-[11px] flex-shrink-0"></i>
-            <div>
-              <strong class="font-bold text-slate-800">Beneficio:</strong>
-              <span class="text-slate-600">${prod.mainBenefit}</span>
-            </div>
-          </div>
-        </div>
-
+        <p class="vc-card-benefit">${prod.mainBenefit}</p><a class="vc-product-link" href="${prod.id === 'diseno-web' ? 'paginas-web' : prod.id === 'edutrayectoria' ? 'edutrayectoria' : prod.id}.html">Conocer solución <span>↗</span></a>
         ${prod.demoUrl && prod.id !== 'aulas-interactivas' ? `
           <div class="mb-4">
             <a 
@@ -504,7 +487,7 @@ function renderProducts(category) {
           <button 
             onclick="openProductModal('${prod.id}')" 
             class="btn-secondary px-3 py-2.5 rounded-xl font-semibold text-xs flex items-center justify-center gap-1.5 flex-1">
-            <i class="fa-solid fa-eye"></i> Detalle & Volante
+            <i class="fa-solid fa-eye"></i> Ver detalles
           </button>
           <a 
             href="${waLink}" 
@@ -693,17 +676,7 @@ function openProductModal(productId) {
 
   modalBody.innerHTML = `
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-      <!-- Columna Volante Original / Preview -->
-      <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 text-center">
-        <div class="relative group rounded-xl overflow-hidden shadow-md">
-          <img src="${product.flyerImage}" alt="Volante ${product.name}" class="w-full h-auto object-cover rounded-xl transition duration-300 group-hover:scale-105">
-          <a href="${product.flyerImage}" target="_blank" class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-sm font-semibold gap-2">
-            <i class="fa-solid fa-magnifying-glass-plus text-lg"></i> Clic para ver en tamaño completo
-          </a>
-        </div>
-        <p class="text-xs text-slate-400 mt-2 italic">Volante oficial y especificaciones de Vanina Cabrera</p>
-      </div>
-
+      <div class="vc-detail-preview"><i class="fa-solid ${product.icon}"></i><span>SOLUCIONES VC</span><h3>${product.name}</h3><p>${product.mainBenefit}</p><a href="${product.id === 'diseno-web' ? 'paginas-web' : product.id}.html">Ver página del servicio →</a></div>
       <!-- Columna Información Detallada -->
       <div class="flex flex-col justify-between h-full">
         <div>

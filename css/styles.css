@@ -409,3 +409,47 @@ body {
   opacity: 1;
   visibility: visible;
 }
+
+/* Soluciones VC — nueva identidad */
+:root{--primary:#2455e6;--primary-dark:#163cae;--accent-gradient:linear-gradient(135deg,#2455e6,#4976fa);--dark:#101d35}body{background:#f7f9fc;color:#17243b}header{box-shadow:none!important}header a>div:first-child.bg-gradient-to-br{background:#183eaa!important}section{scroll-margin-top:90px}.vc-wrap{max-width:1240px;margin:auto;padding:0 32px}.vc-hero{background:radial-gradient(ellipse at 85% 20%,#25467e 0,transparent 55%),#101d35;color:white;padding:90px 0 86px}.vc-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:65px;align-items:center}.vc-kicker,.vc-eyebrow{font-size:11px;font-weight:800;letter-spacing:.15em;color:#92b6ff}.vc-hero h1{font-size:clamp(48px,6vw,86px);line-height:1.02;letter-spacing:-.065em;font-weight:800;margin:24px 0}.vc-hero h1 em{font-style:normal;color:#8eb3ff}.vc-hero p{font-size:18px;line-height:1.75;color:#c4d2e8;max-width:530px}.vc-actions{display:flex;flex-wrap:wrap;gap:12px;margin:32px 0 22px}.vc-primary,.vc-outline{display:inline-flex;align-items:center;justify-content:center;gap:18px;padding:14px 20px;border-radius:9px;font-weight:700;font-size:14px;text-decoration:none}.vc-primary{background:#3566ed;color:white}.vc-outline{border:1px solid #7186a8;color:inherit}.vc-primary:hover{background:#1745cf}.vc-hero small{color:#a6b9d5;font-size:12px}.vc-console{background:#f6f8fc;border:1px solid #8199c0;border-radius:18px;overflow:hidden;box-shadow:0 30px 80px #07122677;color:#152644}.vc-console-top,.vc-console-foot{display:flex;justify-content:space-between;gap:10px;font-size:11px;font-weight:800;padding:15px 22px;background:#e6edf9;color:#3b5684}.vc-console-body{padding:28px}.vc-console-label{font-size:10px;letter-spacing:.12em;color:#5572a5;font-weight:800}.vc-console h2{font-size:34px;line-height:1.15;letter-spacing:-.04em;font-weight:800;margin:12px 0 22px}.vc-console-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.vc-console-grid a{background:white;border:1px solid #dbe4f3;padding:18px;border-radius:12px;display:grid;gap:7px}.vc-console-grid i,.vc-audience-grid i{color:#3566ed;font-size:23px}.vc-console-grid small{color:#52627a}.vc-console-foot{margin:22px -28px -28px}.vc-audiences{padding:52px 0;background:white;border-bottom:1px solid #dfe6ef}.vc-eyebrow{color:#2455e6}.vc-audiences h2{font-size:30px;font-weight:800;letter-spacing:-.035em;margin:8px 0 22px}.vc-audience-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.vc-audience-grid a{border:1px solid #dce4ef;border-radius:12px;padding:20px;display:grid;gap:12px}.vc-audience-grid a:hover,.vc-console-grid a:hover{border-color:#3566ed;transform:translateY(-2px)}.vc-audience-grid span{font-size:13px;color:#2455e6}.product-card,.demo-card{border-radius:14px!important;box-shadow:0 6px 22px #15264408!important}.product-card h3{letter-spacing:-.025em}.vc-card-benefit{font-size:14px;line-height:1.6;color:#455570;margin:12px 0}.vc-product-link{display:flex;justify-content:space-between;color:#2455e6;font-weight:800;font-size:13px;margin:14px 0 20px}.vc-detail-preview{background:#101d35;color:white;padding:32px;border-radius:14px;display:grid;gap:18px}.vc-detail-preview i{font-size:42px;color:#8eb3ff}.vc-detail-preview h3{font-size:30px;font-weight:800}.vc-detail-preview a{color:#a9c5ff}.btn-primary{background:#2455e6!important;box-shadow:none!important}.btn-whatsapp{background:#087d60!important;box-shadow:none!important}.btn-secondary{border-color:#cbd7e8;color:#23427a}.text-gradient{background:linear-gradient(100deg,#2455e6,#4775ed);-webkit-background-clip:text}.filter-tab.active{background:#2455e6!important;color:white!important}#productos,#demos,#cotizador,#beneficios,#faq,#contacto{padding-top:64px;padding-bottom:64px}.animate-pulse{animation:none!important}@media(max-width:800px){.vc-wrap{padding:0 20px}.vc-hero{padding:55px 0}.vc-hero-grid{grid-template-columns:1fr;gap:35px}.vc-audience-grid{grid-template-columns:1fr 1fr}.vc-console-body{padding:20px}.vc-console-foot{margin:20px -20px -20px}.vc-hero p{font-size:16px}}@media(max-width:380px){.vc-audience-grid{grid-template-columns:1fr}.vc-console-grid a{padding:12px}}
+
+/* Identidad nocturna VC */
+:root{color-scheme:dark;--primary:#6495ff;--primary-dark:#3969df;--accent-gradient:linear-gradient(120deg,#91b9ff,#58c8f5);--accent-gradient-soft:#192b48;--card-border:#30425e}body{background:#0d1528!important;color:#e8efff!important}header{background:#101a2e!important;border-color:#263955!important}.vc-hero{background:#0d1528;padding:48px 0 42px}.vc-hero-grid{grid-template-columns:1fr;gap:24px}.vc-hero h1{font-size:clamp(32px,4.5vw,56px);letter-spacing:-.045em;line-height:1.12;margin:15px 0}.vc-hero p{max-width:900px;color:#b7c6de}.vc-hero-art{width:100%;height:auto;max-height:540px;object-fit:cover;border:1px solid #263e5a;border-radius:20px;display:block}.vc-actions{margin:22px 0 0}.vc-audiences,.product-card,.demo-card,.content li,.btn-secondary{background:#152238!important;color:#e8efff!important;border-color:#30425e!important}.vc-audience-grid a{background:#152238;border-color:#30425e}.vc-eyebrow,.vc-audience-grid span,.vc-product-link,.vc-audience-grid i{color:#8ab7ff!important}.vc-card-benefit{color:#b7c6de}.vc-primary{background:#3865df;color:white}.vc-outline{border-color:#526989;color:#e8efff}.text-gradient,.text-gradient-purple{background:linear-gradient(100deg,#9abaff,#63d0ff);-webkit-background-clip:text}.landing{background:#101c32!important}.content li{background:#152238!important}nav a,footer a{color:#91baff!important}footer{color:#b7c6de!important;border-color:#30425e!important}input,select,textarea{background:#101b30!important;color:#edf4ff!important;border-color:#40536f!important}input::placeholder,textarea::placeholder{color:#91a2bd}#demos,#beneficios,#faq,#cotizador,#contacto{background:#0f192d!important}::-webkit-scrollbar-track{background:#101a2e}::-webkit-scrollbar-thumb{background:#40536f}.filter-tab:not(.active){background:#152238!important;color:#c4d5ef!important;border-color:#30425e!important}.btn-secondary:hover,.vc-audience-grid a:hover{background:#203452!important}.vc-detail-preview{background:#101a2e;border:1px solid #30425e}.product-card:hover,.demo-card:hover{border-color:#6495ff!important;box-shadow:0 12px 35px #3675ff20!important} @media(max-width:800px){.vc-hero{padding:34px 0}.vc-hero-art{border-radius:14px}} @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+[class~="bg-white"],[class*="bg-white/"]{background-color:#152238!important}
+[class~="bg-slate-50"],[class*="bg-slate-50/"]{background-color:#152238!important}
+[class~="bg-slate-100"],[class*="bg-slate-100/"]{background-color:#152238!important}
+[class~="bg-slate-200"],[class*="bg-slate-200/"]{background-color:#152238!important}
+[class~="bg-indigo-50"],[class*="bg-indigo-50/"]{background-color:#152238!important}
+[class~="bg-indigo-100"],[class*="bg-indigo-100/"]{background-color:#152238!important}
+[class~="bg-pink-50"],[class*="bg-pink-50/"]{background-color:#152238!important}
+[class~="bg-pink-100"],[class*="bg-pink-100/"]{background-color:#152238!important}
+[class~="bg-emerald-50"],[class*="bg-emerald-50/"]{background-color:#152238!important}
+[class~="bg-emerald-100"],[class*="bg-emerald-100/"]{background-color:#152238!important}
+[class~="bg-blue-50"],[class*="bg-blue-50/"]{background-color:#152238!important}
+[class~="bg-purple-50"],[class*="bg-purple-50/"]{background-color:#152238!important}
+[class~="text-slate-900"]{color:#edf4ff!important}
+[class~="text-slate-800"]{color:#edf4ff!important}
+[class~="text-slate-700"]{color:#b7c6de!important}
+[class~="text-slate-600"]{color:#b7c6de!important}
+[class~="text-slate-500"]{color:#b7c6de!important}
+[class~="text-slate-400"]{color:#b7c6de!important}
+[class~="text-indigo-600"]{color:#9abaff!important}
+[class~="text-indigo-700"]{color:#9abaff!important}
+[class~="text-indigo-800"]{color:#9abaff!important}
+[class~="text-indigo-900"]{color:#9abaff!important}
+[class~="text-indigo-950"]{color:#9abaff!important}
+[class~="text-blue-500"]{color:#9abaff!important}
+[class~="text-purple-500"]{color:#9abaff!important}
+[class~="text-pink-600"]{color:#9abaff!important}
+[class~="text-pink-700"]{color:#9abaff!important}
+[class~="text-emerald-600"]{color:#6ee7b7!important}
+[class~="text-emerald-700"]{color:#6ee7b7!important}
+[class~="text-emerald-800"]{color:#6ee7b7!important}
+[class~="border-slate-100"],[class*="border-slate-100/"]{border-color:#30425e!important}
+[class~="border-slate-200"],[class*="border-slate-200/"]{border-color:#30425e!important}
+[class~="border-slate-300"],[class*="border-slate-300/"]{border-color:#30425e!important}
+[class~="border-indigo-100"],[class*="border-indigo-100/"]{border-color:#30425e!important}
+[class~="border-indigo-200"],[class*="border-indigo-200/"]{border-color:#30425e!important}
+[class~="border-pink-200"],[class*="border-pink-200/"]{border-color:#30425e!important}
+[class*="from-slate-50"],[class*="from-indigo-50"],[class*="from-white"]{background-image:linear-gradient(135deg,#14223a,#10192d)!important} [class*="hover:bg-slate-50"]:hover,[class*="hover:bg-indigo-50"]:hover{background:#223653!important}
